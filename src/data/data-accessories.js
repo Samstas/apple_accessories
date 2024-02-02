@@ -6,7 +6,7 @@ export const accessories = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
     category: "bands",
     price: 99,
-    image: "src/data/accessories-imgs/bands/ocean-band-orange.jpeg",
+    image: "/src/data/accessories-imgs/bands/ocean-band-orange.jpeg",
     discount: null,
   },
   {
@@ -16,7 +16,7 @@ export const accessories = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
     category: "cases",
     price: 59,
-    image: "src/data/accessories-imgs/cases/finewoven-case-evergreen.jpeg",
+    image: "/src/data/accessories-imgs/cases/finewoven-case-evergreen.jpeg",
     discount: 10,
   },
   {
@@ -26,7 +26,7 @@ export const accessories = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
     category: "cables",
     price: 55,
-    image: "src/data/accessories-imgs/cables/magsafe-cable-gray.jpeg",
+    image: "/src/data/accessories-imgs/cables/magsafe-cable-gray.jpeg",
     discount: null,
   },
   {
@@ -36,7 +36,7 @@ export const accessories = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
     category: "bands",
     price: 99,
-    image: "src/data/accessories-imgs/bands/braided-band-stormblue.jpeg",
+    image: "/src/data/accessories-imgs/bands/braided-band-stormblue.jpeg",
     discount: 15,
   },
 
@@ -47,7 +47,7 @@ export const accessories = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
     category: "chargers",
     price: 149,
-    image: "src/data/accessories-imgs/chargers/belkin-charger-standthree.jpeg",
+    image: "/src/data/accessories-imgs/chargers/belkin-charger-standthree.jpeg",
     discount: 15,
   },
 
@@ -58,7 +58,7 @@ export const accessories = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
     category: "chargers",
     price: 149,
-    image: "src/data/accessories-imgs/chargers/hirise-charger-stand.jpeg",
+    image: "/src/data/accessories-imgs/chargers/hirise-charger-stand.jpeg",
     discount: null,
   },
   {
@@ -68,7 +68,7 @@ export const accessories = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
     category: "chargers",
     price: 99,
-    image: "src/data/accessories-imgs/chargers/belkin-charger-standtwo.jpeg",
+    image: "/src/data/accessories-imgs/chargers/belkin-charger-standtwo.jpeg",
     discount: null,
   },
 
@@ -79,7 +79,7 @@ export const accessories = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
     category: "cases",
     price: 49,
-    image: "src/data/accessories-imgs/cases/otterbox-case-dragon.jpeg",
+    image: "/src/data/accessories-imgs/cases/otterbox-case-dragon.jpeg",
     discount: 5,
   },
   {
@@ -90,7 +90,7 @@ export const accessories = [
     category: "chargers",
     price: 129,
     image:
-      "src/data/accessories-imgs/chargers/twelve-charger-butterflytwo.jpeg",
+      "/src/data/accessories-imgs/chargers/twelve-charger-butterflytwo.jpeg",
     discount: 10,
   },
 
@@ -101,7 +101,7 @@ export const accessories = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
     category: "bands",
     price: 49,
-    image: "src/data/accessories-imgs/bands/sport-band-blue.jpeg",
+    image: "/src/data/accessories-imgs/bands/sport-band-blue.jpeg",
     discount: 30,
   },
   {
@@ -111,7 +111,7 @@ export const accessories = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
     category: "cases",
     price: 49,
-    image: "src/data/accessories-imgs/cases/flexquartz-case-transparent.jpeg",
+    image: "/src/data/accessories-imgs/cases/flexquartz-case-transparent.jpeg",
     discount: 5,
   },
   {
@@ -121,7 +121,7 @@ export const accessories = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
     category: "bands",
     price: 49,
-    image: "src/data/accessories-imgs/bands/sport-band-pink.jpeg",
+    image: "/src/data/accessories-imgs/bands/sport-band-pink.jpeg",
     discount: null,
   },
   {
@@ -131,7 +131,7 @@ export const accessories = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
     category: "cases",
     price: 49,
-    image: "src/data/accessories-imgs/cases/silicon-case-yellow.jpeg",
+    image: "/src/data/accessories-imgs/cases/silicon-case-yellow.jpeg",
     discount: null,
   },
   {
@@ -141,7 +141,7 @@ export const accessories = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
     category: "bands",
     price: 49,
-    image: "src/data/accessories-imgs/bands/sport-band-starlight.jpeg",
+    image: "/src/data/accessories-imgs/bands/sport-band-starlight.jpeg",
     discount: 5,
   },
   {
@@ -151,7 +151,7 @@ export const accessories = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
     category: "cables",
     price: 55,
-    image: "src/data/accessories-imgs/cables/magsafe-cable-black.jpeg",
+    image: "/src/data/accessories-imgs/cables/magsafe-cable-black.jpeg",
     discount: 10,
   },
   {
@@ -161,7 +161,7 @@ export const accessories = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
     category: "bands",
     price: 49,
-    image: "src/data/accessories-imgs/bands/unity-band-black.jpeg",
+    image: "/src/data/accessories-imgs/bands/unity-band-black.jpeg",
     discount: 10,
   },
   {
@@ -171,7 +171,7 @@ export const accessories = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
     category: "cases",
     price: 59,
-    image: "src/data/accessories-imgs/cases/finewoven-case-taupe.jpeg",
+    image: "/src/data/accessories-imgs/cases/finewoven-case-taupe.jpeg",
     discount: null,
   },
   {
@@ -181,7 +181,7 @@ export const accessories = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
     category: "cables",
     price: 55,
-    image: "src/data/accessories-imgs/cables/magsafe-cable-starlight.jpeg",
+    image: "/src/data/accessories-imgs/cables/magsafe-cable-starlight.jpeg",
     discount: 5,
   },
   {
@@ -191,7 +191,7 @@ export const accessories = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
     category: "bands",
     price: 99,
-    image: "src/data/accessories-imgs/bands/loop-band-olive.jpeg",
+    image: "/src/data/accessories-imgs/bands/loop-band-olive.jpeg",
     discount: 5,
   },
 
@@ -202,7 +202,7 @@ export const accessories = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
     category: "cases",
     price: 59,
-    image: "src/data/accessories-imgs/cases/finewoven-case-mulberry.jpeg",
+    image: "/src/data/accessories-imgs/cases/finewoven-case-mulberry.jpeg",
     discount: null,
   },
 
@@ -213,7 +213,7 @@ export const accessories = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
     category: "chargers",
     price: 149,
-    image: "src/data/accessories-imgs/chargers/belkin-charger-pad.jpeg",
+    image: "/src/data/accessories-imgs/chargers/belkin-charger-pad.jpeg",
     discount: 5,
   },
   {
@@ -223,7 +223,7 @@ export const accessories = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
     category: "cases",
     price: 49,
-    image: "src/data/accessories-imgs/cases/silicon-case-violet.jpeg",
+    image: "/src/data/accessories-imgs/cases/silicon-case-violet.jpeg",
     discount: 20,
   },
   {
@@ -233,7 +233,7 @@ export const accessories = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
     category: "bands",
     price: 99,
-    image: "src/data/accessories-imgs/bands/ocean-band-blue.jpeg",
+    image: "/src/data/accessories-imgs/bands/ocean-band-blue.jpeg",
     discount: 10,
   },
 
@@ -244,7 +244,7 @@ export const accessories = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
     category: "cases",
     price: 49,
-    image: "src/data/accessories-imgs/cases/otterbox-case-blue.jpeg",
+    image: "/src/data/accessories-imgs/cases/otterbox-case-blue.jpeg",
     discount: 10,
   },
   {
@@ -254,7 +254,7 @@ export const accessories = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
     category: "bands",
     price: 99,
-    image: "src/data/accessories-imgs/bands/trail-band-beige.jpeg",
+    image: "/src/data/accessories-imgs/bands/trail-band-beige.jpeg",
     discount: null,
   },
   {
@@ -264,7 +264,7 @@ export const accessories = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
     category: "cases",
     price: 49,
-    image: "src/data/accessories-imgs/cases/clear-case-transparent.jpeg",
+    image: "/src/data/accessories-imgs/cases/clear-case-transparent.jpeg",
     discount: null,
   },
   {
@@ -274,7 +274,7 @@ export const accessories = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
     category: "chargers",
     price: 149,
-    image: "src/data/accessories-imgs/chargers/morphie-charger-travel.jpeg",
+    image: "/src/data/accessories-imgs/chargers/morphie-charger-travel.jpeg",
     discount: null,
   },
   {
@@ -284,7 +284,7 @@ export const accessories = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
     category: "cases",
     price: 49,
-    image: "src/data/accessories-imgs/cases/otterbox-case-gray.jpeg",
+    image: "/src/data/accessories-imgs/cases/otterbox-case-gray.jpeg",
     discount: null,
   },
 ];

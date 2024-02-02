@@ -5,7 +5,7 @@ function SearchField() {
     <form>
       <label className="relative block">
         <input
-          className="w-full bg-gray-200 rounded-md py-1 pl-3 pr-10 focus:outline-none"
+          className=" w-[180px] sm:w-full bg-gray-200 rounded-md py-1 pl-3 pr-10 focus:outline-zinc-300 "
           placeholder="Search"
           type="text"
         />

@@ -15,7 +15,7 @@ function ProductInfo() {
         <div className="lg:w-4/5 mx-auto flex flex-wrap">
           <img
             alt={`Image ${title}`}
-            className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
+            className="lg:w-1/2 w-full lg:h-auto  object-cover object-center rounded"
             src={image}
           />
           <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">

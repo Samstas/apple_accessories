@@ -1,11 +1,7 @@
 import ProductsList from "../../components/ProductsList";
 
 function ProductsPage() {
-  return (
-    <>
-      <ProductsList />
-    </>
-  );
+  return <ProductsList />;
 }
 
 export default ProductsPage;

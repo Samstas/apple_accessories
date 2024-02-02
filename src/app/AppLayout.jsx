@@ -4,7 +4,8 @@ import Header from "../components/ui/Header";
 
 function AppLayout() {
   return (
-    <div className="w-[66.67vw]  mx-auto flex flex-col items justify-between h-[100vh]">
+    // w-[66.67vw] 
+    <div className="w-[100vw] sm:w-[66.67vw]  mx-auto flex flex-col items justify-between h-[100vh]">
       <Header />
 
       <main>

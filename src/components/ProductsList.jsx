@@ -6,7 +6,40 @@ function ProductsList() {
 
   return (
     <section className="text-gray-400 body-font">
-      <div className="container px-5 py-24 mx-auto">
+      {/* Filter and Sort field  */}
+      <div className="flex justify-between items-center mt-8 px-6 ">
+        {/* FILTERING  */}
+        <ul className="flex items-center gap-2 ">
+          <li>
+            <button className="border-[2px] py-[2px] px-[4px] text-sm sm:text-base sm:py-1 sm:px-3 rounded-md text-zinc-800  border-zinc-800  hover:bg-zinc-700 hover:text-zinc-200">
+              Cases
+            </button>
+          </li>
+          <li>
+            <button className="border-[2px] py-[2px] px-[4px] text-sm sm:text-base sm:py-1 sm:px-3 rounded-md text-zinc-800  border-zinc-800  hover:bg-zinc-700 hover:text-zinc-200">
+              Cases
+            </button>
+          </li>
+          <li>
+            <button className="border-[2px] py-[2px] px-[4px] text-sm sm:text-base sm:py-1 sm:px-3 rounded-md text-zinc-800  border-zinc-800  hover:bg-zinc-700 hover:text-zinc-200">
+              Cases
+            </button>
+          </li>
+          <li>
+            <button className="border-[2px] py-[2px] px-[4px] text-sm sm:text-base sm:py-1 sm:px-3 rounded-md text-zinc-800  border-zinc-800  hover:bg-zinc-700 hover:text-zinc-200">
+              Cases
+            </button>
+          </li>
+          
+        </ul>
+        {/* SORTING  */}
+        <select name="default" id="">
+          <option value="">Default</option>
+        </select>
+      </div>
+
+      {/* Products List Block  */}
+      <div className="container px-5 py-10 mx-auto">
         <ul className="flex flex-wrap -m-4">
           {/* ====== */}
           {data.map((product) => (

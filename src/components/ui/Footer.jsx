@@ -1,16 +1,20 @@
 import { AiOutlineApple } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
     <footer className="text-gray-400  body-font">
       <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-        <a className="flex title-font font-medium items-center md:justify-start justify-center text-[#202020]">
+        <Link
+          to="/"
+          className="flex title-font font-medium items-center md:justify-start justify-center text-[#202020]"
+        >
           <AiOutlineApple size="30" color="#2a2a2a" />
-        </a>
+        </Link>
         <p className="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
           &copy; 2024 Apple Accessories. All rights reserved.
         </p>
-        <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        {/* <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
           <a className="text-gray-400">
             <svg
               fill="currentColor"
@@ -66,7 +70,7 @@ function Footer() {
               <circle cx="4" cy="4" r="2" stroke="none"></circle>
             </svg>
           </a>
-        </span>
+        </span> */}
       </div>
     </footer>
   );
