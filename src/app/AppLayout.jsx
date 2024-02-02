@@ -1,0 +1,19 @@
+import { Outlet } from "react-router-dom";
+import Footer from "../components/ui/Footer";
+import Header from "../components/ui/Header";
+
+function AppLayout() {
+  return (
+    <div className="w-[66.67vw]  mx-auto flex flex-col items justify-between h-[100vh]">
+      <Header />
+
+      <main>
+        <Outlet />
+      </main>
+
+      <Footer />
+    </div>
+  );
+}
+
+export default AppLayout;
