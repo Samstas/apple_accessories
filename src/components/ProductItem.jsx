@@ -6,7 +6,7 @@ function ProductItem({ item }) {
 
   return (
     <li
-      onClick={() => navigate(`products/${id}`)}
+      onClick={() => navigate(`${id}`)}
       className="lg:w-1/4 md:w-1/2 p-3 w-full text-center hover:scale-[1.01] cursor-pointer hover:transition-all ease-in hover:ease-in rounded-md hover:duration-200 duration-200"
     >
       <Link className="flex flex-col bg-white rounded-xl py-5 px-1 h-full shadow hover:shadow-md ">

@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer className="text-gray-400  body-font">
+    <footer className="text-gray-400   body-font ">
       <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
         <Link
-          to="/"
+          to="/accessories?category=all"
           className="flex title-font font-medium items-center md:justify-start justify-center text-[#202020]"
         >
           <AiOutlineApple size="30" color="#2a2a2a" />

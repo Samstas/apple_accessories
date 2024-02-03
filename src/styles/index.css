@@ -9,3 +9,11 @@ body {
   /* background-color: whitesmoke; */
   background-color: #eee;
 }
+
+.active {
+  background-color: slategray;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}

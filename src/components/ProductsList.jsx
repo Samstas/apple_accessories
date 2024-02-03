@@ -1,37 +1,31 @@
+import { useSearchParams } from "react-router-dom";
 import { accessories } from "../data/data-accessories";
 import ProductItem from "./ProductItem";
+import FilterOptions from "./dataOperations/FilterOptions";
 
 function ProductsList() {
   const data = accessories;
+  const [searchParams] = useSearchParams();
+
+  const filterValue = searchParams.get("category");
+  let filteredProducts;
+
+  if (filterValue === "all") filteredProducts = data;
+  if (filterValue === "cases")
+    filteredProducts = data.filter((item) => item.category === "cases");
+  if (filterValue === "bands")
+    filteredProducts = data.filter((item) => item.category === "bands");
+  if (filterValue === "chargers")
+    filteredProducts = data.filter((item) => item.category === "chargers");
+  if (filterValue === "cables")
+    filteredProducts = data.filter((item) => item.category === "cables");
 
   return (
     <section className="text-gray-400 body-font">
       {/* Filter and Sort field  */}
       <div className="flex justify-between items-center mt-8 px-6 ">
         {/* FILTERING  */}
-        <ul className="flex items-center gap-2 ">
-          <li>
-            <button className="border-[2px] py-[2px] px-[4px] text-sm sm:text-base sm:py-1 sm:px-3 rounded-md text-zinc-800  border-zinc-800  hover:bg-zinc-700 hover:text-zinc-200">
-              Cases
-            </button>
-          </li>
-          <li>
-            <button className="border-[2px] py-[2px] px-[4px] text-sm sm:text-base sm:py-1 sm:px-3 rounded-md text-zinc-800  border-zinc-800  hover:bg-zinc-700 hover:text-zinc-200">
-              Cases
-            </button>
-          </li>
-          <li>
-            <button className="border-[2px] py-[2px] px-[4px] text-sm sm:text-base sm:py-1 sm:px-3 rounded-md text-zinc-800  border-zinc-800  hover:bg-zinc-700 hover:text-zinc-200">
-              Cases
-            </button>
-          </li>
-          <li>
-            <button className="border-[2px] py-[2px] px-[4px] text-sm sm:text-base sm:py-1 sm:px-3 rounded-md text-zinc-800  border-zinc-800  hover:bg-zinc-700 hover:text-zinc-200">
-              Cases
-            </button>
-          </li>
-          
-        </ul>
+        <FilterOptions filterField="category" />
         {/* SORTING  */}
         <select name="default" id="">
           <option value="">Default</option>
@@ -41,8 +35,7 @@ function ProductsList() {
       {/* Products List Block  */}
       <div className="container px-5 py-10 mx-auto">
         <ul className="flex flex-wrap -m-4">
-          {/* ====== */}
-          {data.map((product) => (
+          {filteredProducts?.map((product) => (
             <ProductItem key={product.id} item={product} />
           ))}
         </ul>
