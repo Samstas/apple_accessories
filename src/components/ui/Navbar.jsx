@@ -36,7 +36,7 @@ function Navbar() {
           </Link>
         </li>
         <li>
-          <Link>
+          <Link to="/wishlist">
             <BiHeart size="24" color="#2a2a2a" className="cursor-pointer" />
           </Link>
         </li>

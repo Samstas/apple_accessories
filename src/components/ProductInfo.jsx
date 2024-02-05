@@ -3,13 +3,40 @@ import { accessories } from "../data/data-accessories";
 import { BiHeart } from "react-icons/bi";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, getCart } from "../redux/slices/cartSlice";
+import { useWishList } from "../hooks/useWishList";
+import { useState } from "react";
 
 function ProductInfo() {
   const products = accessories;
   const { id } = useParams();
   const cart = useSelector(getCart);
-  console.log(cart);
   const dispatch = useDispatch();
+
+  const {
+    handleRemoveItemFromWishList,
+    handleAddProductToWishList,
+    isItemAlreadyInWishList,
+  } = useWishList();
+
+  //check if item inside wishlist
+
+  const itemInsideWishList = isItemAlreadyInWishList(id);
+  console.log(itemInsideWishList);
+
+  const [toggle, setToggle] = useState(itemInsideWishList);
+
+  function handleToggle(productId, image, title, price) {
+    if (toggle === true) {
+      handleRemoveItemFromWishList(productId);
+      return setToggle(false);
+    } else {
+      handleAddProductToWishList(productId, image, title, price);
+      return setToggle(true);
+    }
+  }
+
+  console.log(toggle);
+  // console.log(cart);
 
   const isItemAlreadyInsideCart = cart.some((item) => item.id === id);
   const navigate = useNavigate();
@@ -17,7 +44,7 @@ function ProductInfo() {
   const { description, image, price, title, category, quantity, totalPrice } =
     products.find((item) => item.id === Number(id));
 
-  function handleAddToCart(id, image, title, quantity, price, totalPrice) {
+  function handleAddToCart(id, image, title, quantity, price) {
     const item = {
       id,
       image,
@@ -144,7 +171,12 @@ function ProductInfo() {
                 </button>
               )}
 
-              <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4 hover:scale-110 ">
+              <button
+                onClick={() => handleToggle(id, image, title, price)}
+                className={`rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4 hover:scale-110 hover:bg-red-500 active:scale-90 ${
+                  itemInsideWishList ? "bg-red-500" : ""
+                }`}
+              >
                 <BiHeart size="24" color="#2a2a2a" />
               </button>
             </div>

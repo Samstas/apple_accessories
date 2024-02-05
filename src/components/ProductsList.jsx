@@ -2,11 +2,13 @@ import { useSearchParams } from "react-router-dom";
 import { accessories } from "../data/data-accessories";
 import ProductItem from "./ProductItem";
 import FilterOptions from "./dataOperations/FilterOptions";
+import SortOptions from "./dataOperations/SortOptions";
 
 function ProductsList() {
   const data = accessories;
   const [searchParams] = useSearchParams();
 
+  //Filter accessories
   const filterValue = searchParams.get("category");
   let filteredProducts;
 
@@ -20,6 +22,27 @@ function ProductsList() {
   if (filterValue === "cables")
     filteredProducts = data.filter((item) => item.category === "cables");
 
+  //Sort accessories
+  const sortBy = searchParams.get("sortBy") || "id-asc";
+  const [field, direction] = sortBy.split("-");
+
+  const sortedProducts = filteredProducts?.sort((a, b) => {
+    const modifier = direction === "asc" ? 1 : -1;
+
+    if (field === "id") {
+      return (a.id - b.id) * modifier;
+    }
+
+    if (field === "price") {
+      return Number(a.price - b.price) * modifier;
+    }
+
+    if (field === "title") {
+      return a.title.localeCompare(b.title) * modifier;
+    }
+    return 0;
+  });
+
   return (
     <section className="text-gray-400 body-font">
       {/* Filter and Sort field  */}
@@ -27,15 +50,13 @@ function ProductsList() {
         {/* FILTERING  */}
         <FilterOptions filterField="category" />
         {/* SORTING  */}
-        <select name="default" id="">
-          <option value="">Default</option>
-        </select>
+        <SortOptions />
       </div>
 
       {/* Products List Block  */}
       <div className="container px-5 py-10 mx-auto">
         <ul className="flex flex-wrap -m-4">
-          {filteredProducts?.map((product) => (
+          {sortedProducts?.map((product) => (
             <ProductItem key={product.id} item={product} />
           ))}
         </ul>

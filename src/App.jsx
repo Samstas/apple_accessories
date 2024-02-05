@@ -1,9 +1,11 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import AppLayout from "./app/AppLayout";
-import ProductsListPage from "./app/pages/ProductsListPage";
-import ProductItemPage from "./app/pages/ProductItemPage";
-import NotFoundPage from "./app/pages/NotFoundPage";
+
 import ShoppingCartPage from "./app/pages/ShoppingCartPage";
+import ProductsListPage from "./app/pages/ProductsListPage";
+import ProductInfoPage from "./app/pages/ProductInfoPage";
+import NotFoundPage from "./app/pages/NotFoundPage";
+import WishListPage from "./app/pages/WishListPage";
+import AppLayout from "./app/AppLayout";
 
 function App() {
   return (
@@ -19,8 +21,9 @@ function App() {
             element={<Navigate replace to="accessories?category=all" />}
           />
           <Route path="accessories" element={<ProductsListPage />} />
-          <Route path="accessories/:id" element={<ProductItemPage />} />
+          <Route path="accessories/:id" element={<ProductInfoPage />} />
           <Route path="cart" element={<ShoppingCartPage />} />
+          <Route path="wishlist" element={<WishListPage />} />
 
           <Route path="*" element={<NotFoundPage />} />
         </Route>
