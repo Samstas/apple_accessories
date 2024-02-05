@@ -1,14 +1,36 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { accessories } from "../data/data-accessories";
 import { BiHeart } from "react-icons/bi";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart, getCart } from "../redux/slices/cartSlice";
 
 function ProductInfo() {
   const products = accessories;
   const { id } = useParams();
+  const cart = useSelector(getCart);
+  console.log(cart);
+  const dispatch = useDispatch();
 
-  const { description, image, price, title, category } = products.find(
-    (item) => item.id === Number(id)
-  );
+  const isItemAlreadyInsideCart = cart.some((item) => item.id === id);
+  const navigate = useNavigate();
+
+  const { description, image, price, title, category, quantity, totalPrice } =
+    products.find((item) => item.id === Number(id));
+
+  function handleAddToCart(id, image, title, quantity, price, totalPrice) {
+    const item = {
+      id,
+      image,
+      title,
+      quantity,
+      price,
+      totalPrice: price * quantity,
+    };
+
+    dispatch(addToCart(item));
+    alert(`you add accessory ${title}`);
+  }
+
   return (
     <section className="text-gray-600 body-font overflow-hidden">
       <div className="container px-5 py-24 mx-auto">
@@ -91,9 +113,37 @@ function ProductInfo() {
               <span className="title-font font-medium text-2xl text-gray-900">
                 ${price}
               </span>
-              <button className="flex ml-auto text-white bg-zinc-800 border-0 py-2 px-6 focus:outline-none hover:bg-zinc-700 rounded">
-                Add to cart
+              <button
+                onClick={() => navigate("/")}
+                className="flex ml-auto text-white bg-zinc-800 border-0 py-2 px-6 focus:outline-none hover:bg-zinc-700 rounded mr-1"
+              >
+                Back to store
               </button>
+              {isItemAlreadyInsideCart ? (
+                <button
+                  onClick={() => navigate("/cart")}
+                  className="flex  text-white bg-zinc-800 border-0 py-2 px-6 focus:outline-none hover:bg-zinc-700 rounded"
+                >
+                  Go to cart
+                </button>
+              ) : (
+                <button
+                  onClick={() =>
+                    handleAddToCart(
+                      id,
+                      image,
+                      title,
+                      quantity,
+                      price,
+                      totalPrice
+                    )
+                  }
+                  className="flex  text-white bg-zinc-800 border-0 py-2 px-6 focus:outline-none hover:bg-zinc-700 rounded"
+                >
+                  Add to cart
+                </button>
+              )}
+
               <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4 hover:scale-110 ">
                 <BiHeart size="24" color="#2a2a2a" />
               </button>

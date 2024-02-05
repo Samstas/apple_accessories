@@ -3,6 +3,8 @@ import { BiShoppingBag, BiUser, BiHeart } from "react-icons/bi";
 import Logo from "./Logo";
 import SearchField from "../SearchField";
 import { Link } from "react-router-dom";
+import { getCart } from "../../redux/slices/cartSlice";
+import { useSelector } from "react-redux";
 
 // const navLinks = [
 //   { title: "Home", path: "/" },
@@ -10,6 +12,8 @@ import { Link } from "react-router-dom";
 // ];
 
 function Navbar() {
+  const cartQuantity = useSelector(getCart).length;
+  console.log(cartQuantity);
   return (
     <nav className="flex justify-between items-center border-b-2 px-4 py-2">
       <Logo />
@@ -24,9 +28,11 @@ function Navbar() {
               color="#2a2a2a"
               className="cursor-pointer"
             />
-            <div className=" w-5 h-5 text-center font-bold  absolute -right-2 -top-1 sm:-right-2 sm:-top-1 bg-violet-400 text-zinc-800 text-[12px] rounded-full p-[1px] overflow-hidden">
-              1
-            </div>
+            {cartQuantity ? (
+              <div className=" w-5 h-5 text-center font-bold  absolute -right-2 -top-1 sm:-right-2 sm:-top-1 bg-violet-400 text-zinc-800 text-[12px] rounded-full p-[1px] overflow-hidden">
+                {cartQuantity}
+              </div>
+            ) : null}
           </Link>
         </li>
         <li>

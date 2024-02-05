@@ -14,7 +14,10 @@ function App() {
 
         {/* App Layout */}
         <Route element={<AppLayout />}>
-          <Route index element={<Navigate replace to="accessories" />} />
+          <Route
+            index
+            element={<Navigate replace to="accessories?category=all" />}
+          />
           <Route path="accessories" element={<ProductsListPage />} />
           <Route path="accessories/:id" element={<ProductItemPage />} />
           <Route path="cart" element={<ShoppingCartPage />} />
