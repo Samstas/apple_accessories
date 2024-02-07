@@ -21,8 +21,7 @@ export function useWishList() {
     //   (item) => item.id === productId
     // );
 
-    // if (isProductAlreadyInWishList) return alert("❌Already in wishlist");
-
+    
     if (wishProduct) {
       setWishList([...wishList, wishProduct]);
     }

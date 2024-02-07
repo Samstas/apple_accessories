@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addToCart, getCart } from "../redux/slices/cartSlice";
 import { useWishList } from "../hooks/useWishList";
 import { useState } from "react";
+import Loader from "../components/ui/loader/Loader";
 
 function ProductInfo() {
   const products = accessories;
@@ -58,7 +59,11 @@ function ProductInfo() {
     alert(`you add accessory ${title}`);
   }
 
-  return (
+  return !products ? (
+    <div>
+      <Loader />
+    </div>
+  ) : (
     <section className="text-gray-600 body-font overflow-hidden">
       <div className="container px-5 py-24 mx-auto">
         <div className="lg:w-4/5 mx-auto flex flex-wrap">

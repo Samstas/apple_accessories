@@ -3,6 +3,7 @@ import { accessories } from "../data/data-accessories";
 import ProductItem from "./ProductItem";
 import FilterOptions from "./dataOperations/FilterOptions";
 import SortOptions from "./dataOperations/SortOptions";
+import Loader from "../components/ui/loader/Loader";
 
 function ProductsList() {
   const data = accessories;
@@ -43,7 +44,9 @@ function ProductsList() {
     return 0;
   });
 
-  return (
+  return !sortedProducts ? (
+    <Loader />
+  ) : (
     <section className="text-gray-400 body-font">
       {/* Filter and Sort field  */}
       <div className="flex justify-between items-center mt-8 px-6 ">
