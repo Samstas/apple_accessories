@@ -6,13 +6,20 @@ import ProductInfoPage from "./app/pages/ProductInfoPage";
 import NotFoundPage from "./app/pages/NotFoundPage";
 import WishListPage from "./app/pages/WishListPage";
 import AppLayout from "./app/AppLayout";
+import AuthLayout from "./auth/AuthLayout";
+import Login from "./auth/pages/Login";
+import SignUp from "./auth/pages/SignUp";
+import TestNewProductList from "./components/TestNewProductList";
 
 function App() {
   return (
     <>
       <Routes>
         {/* Authorization Layout */}
-        <Route></Route>
+        <Route element={<AuthLayout />}>
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
+        </Route>
 
         {/* App Layout */}
         <Route element={<AppLayout />}>
@@ -24,6 +31,9 @@ function App() {
           <Route path="accessories/:id" element={<ProductInfoPage />} />
           <Route path="cart" element={<ShoppingCartPage />} />
           <Route path="wishlist" element={<WishListPage />} />
+
+          {/* Testing Products List  */}
+          <Route path="test" element={<TestNewProductList />} />
 
           <Route path="*" element={<NotFoundPage />} />
         </Route>

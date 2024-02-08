@@ -1,6 +1,7 @@
 import { GiHeartMinus } from "react-icons/gi";
 import { useWishList } from "../../hooks/useWishList";
 import { Link } from "react-router-dom";
+import EmptyWishlist from "./EmptyWishlist";
 
 function WishList() {
   const { wishList, handleRemoveItemFromWishList } = useWishList();
@@ -9,10 +10,7 @@ function WishList() {
   return (
     <section className="text-gray-400 body-font">
       {wishList?.length === 0 ? (
-        <div className="flex justify-center items-center flex-col mt-6 text-[#ccc]">
-          <GiHeartMinus size={250} />
-          <h1>Your wishlist is empty!</h1>
-        </div>
+        <EmptyWishlist />
       ) : (
         <>
           <h1 className="text-center text-xl font-bold mt-4">Your Wishlist</h1>
