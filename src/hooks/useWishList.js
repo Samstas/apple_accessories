@@ -3,7 +3,6 @@ import { useLocalStorage } from "./useLocalStorage";
 
 export function useWishList() {
   const [wishList, setWishList] = useLocalStorage([], "wishlist");
-
   function isItemAlreadyInWishList(itemId) {
     return wishList?.some((item) => item.id === itemId);
   }
@@ -21,7 +20,6 @@ export function useWishList() {
     //   (item) => item.id === productId
     // );
 
-    
     if (wishProduct) {
       setWishList([...wishList, wishProduct]);
     }
@@ -40,8 +38,8 @@ export function useWishList() {
 
   return {
     wishList,
-    handleAddProductToWishList,
-    handleRemoveItemFromWishList,
+    onAddProductToWishList: handleAddProductToWishList,
+    onRemoveItemFromWishList: handleRemoveItemFromWishList,
     isItemAlreadyInWishList,
   };
 }

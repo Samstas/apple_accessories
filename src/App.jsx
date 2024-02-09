@@ -11,6 +11,14 @@ import Login from "./auth/pages/Login";
 import SignUp from "./auth/pages/SignUp";
 import TestNewProductList from "./components/TestNewProductList";
 
+// ❌ Add function to convert currency
+// ❌ Refactor code/ create context or custom hooks
+// ❌ Set regular colors
+// ❌ Change select style Sorting
+// ❌ Make Authentication with Firebase
+// ❌ Add react-toaster for notifications
+// ❌ Change style of all buttons, bg, border-radius, hover, active ...
+
 function App() {
   return (
     <>

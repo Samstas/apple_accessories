@@ -1,43 +1,42 @@
-import { useParams, useNavigate } from "react-router-dom";
-import { accessories } from "../data/data-accessories";
 import { BiHeart } from "react-icons/bi";
-import { useDispatch, useSelector } from "react-redux";
-import { addToCart, getCart } from "../redux/slices/cartSlice";
-import { useWishList } from "../hooks/useWishList";
 import { useState } from "react";
+import { useSelector } from "react-redux";
+import { useParams, useNavigate } from "react-router-dom";
+
 import Loader from "../components/ui/loader/Loader";
 
+import { useCart } from "../context/CartContext";
+import { getCart } from "../redux/slices/cartSlice";
+import { useWishList } from "../hooks/useWishList";
+import { accessories } from "../data/data-accessories";
+
 function ProductInfo() {
-  const products = accessories;
   const { id } = useParams();
+  const { onAddToCart } = useCart();
+
+  const products = accessories;
   const cart = useSelector(getCart);
-  const dispatch = useDispatch();
 
   const {
-    handleRemoveItemFromWishList,
-    handleAddProductToWishList,
+    onAddProductToWishList,
+    onRemoveItemFromWishList,
     isItemAlreadyInWishList,
   } = useWishList();
 
   //check if item inside wishlist
-
   const itemInsideWishList = isItemAlreadyInWishList(id);
-  console.log(itemInsideWishList);
 
   const [toggle, setToggle] = useState(itemInsideWishList);
 
   function handleToggle(productId, image, title, price) {
     if (toggle === true) {
-      handleRemoveItemFromWishList(productId);
+      onRemoveItemFromWishList(productId);
       return setToggle(false);
     } else {
-      handleAddProductToWishList(productId, image, title, price);
+      onAddProductToWishList(productId, image, title, price);
       return setToggle(true);
     }
   }
-
-  console.log(toggle);
-  // console.log(cart);
 
   const isItemAlreadyInsideCart = cart.some((item) => item.id === id);
   const navigate = useNavigate();
@@ -45,24 +44,8 @@ function ProductInfo() {
   const { description, image, price, title, category, quantity, totalPrice } =
     products.find((item) => item.id === Number(id));
 
-  function handleAddToCart(id, image, title, quantity, price) {
-    const item = {
-      id,
-      image,
-      title,
-      quantity,
-      price,
-      totalPrice: price * quantity,
-    };
-
-    dispatch(addToCart(item));
-    alert(`you add accessory ${title}`);
-  }
-
   return !products ? (
-    <div>
-      <Loader />
-    </div>
+    <Loader />
   ) : (
     <section className="text-gray-600 body-font overflow-hidden">
       <div className="container px-5 py-24 mx-auto">
@@ -161,14 +144,7 @@ function ProductInfo() {
               ) : (
                 <button
                   onClick={() =>
-                    handleAddToCart(
-                      id,
-                      image,
-                      title,
-                      quantity,
-                      price,
-                      totalPrice
-                    )
+                    onAddToCart(id, image, title, quantity, price, totalPrice)
                   }
                   className="flex  text-white bg-zinc-800 border-0 py-2 px-6 focus:outline-none hover:bg-zinc-700 rounded"
                 >

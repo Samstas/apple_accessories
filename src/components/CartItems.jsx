@@ -1,15 +1,14 @@
-import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+
 import { getCart } from "../redux/slices/cartSlice";
+import { useCart } from "../context/CartContext";
+
 import CartItem from "./CartItem";
 
 function CartItems() {
-  //   const [show, setShow] = useState(false)
   const cart = useSelector(getCart);
-  // title, price, category, image,
-  console.log(cart);
-
-  const totalCartPrice = cart.reduce((acc, item) => item.totalPrice + acc, 0);
+  const { totalCartPrice } = useCart();
 
   return (
     <>
@@ -30,7 +29,7 @@ function CartItems() {
           {/* Table Body  */}
           <tbody className="divide-y">
             {cart.map((cartItem) => (
-              <CartItem key={cartItem.id} item={cartItem} />
+              <CartItem key={cartItem.id} accessoryItem={cartItem} />
             ))}
             <tr className="text-center">
               <td></td>
@@ -38,7 +37,9 @@ function CartItems() {
                 Total
               </td>
               {/* TODO: write like reducer to sum all prices  */}
-              <td className="text-lg font-medium px-4 sm:px-6 py-4">${totalCartPrice}</td>
+              <td className="text-lg font-medium px-4 sm:px-6 py-4">
+                ${totalCartPrice}
+              </td>
               <td></td>
             </tr>
           </tbody>
@@ -52,7 +53,7 @@ function CartItems() {
             Back to products
           </Link>
           <Link className="border px-4 py-2 border-zinc-600 hover:bg-zinc-600 hover:text-white ">
-            Chekout
+            Checkout
           </Link>
         </div>
       </div>

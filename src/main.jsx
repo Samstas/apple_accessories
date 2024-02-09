@@ -7,13 +7,16 @@ import { Provider } from "react-redux";
 
 import "./styles/index.css";
 import { store } from "./redux/store.js";
+import { CartProvider } from "./context/CartContext.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <CartProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </CartProvider>
     </Provider>
   </React.StrictMode>
 );
