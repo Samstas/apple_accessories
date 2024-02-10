@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 import { BiShoppingBag, BiUser, BiHeart } from "react-icons/bi";
 
 import Logo from "./Logo";
 import SearchField from "../SearchField";
-import { Link } from "react-router-dom";
+
 import { getCart } from "../../redux/slices/cartSlice";
-import { useSelector } from "react-redux";
 
 // const navLinks = [
 //   { title: "Home", path: "/" },
@@ -13,7 +14,7 @@ import { useSelector } from "react-redux";
 
 function Navbar() {
   const cartQuantity = useSelector(getCart).length;
-  console.log(cartQuantity);
+
   return (
     <nav className="flex justify-between items-center border-b-2 px-4 py-2">
       <Logo />
@@ -41,7 +42,7 @@ function Navbar() {
           </Link>
         </li>
         <li>
-          <Link to='/login'>
+          <Link to="/login">
             <BiUser size="24" color="#2a2a2a" className="cursor-pointer" />
           </Link>
         </li>

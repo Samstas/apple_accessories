@@ -1,48 +1,12 @@
-import { useSearchParams } from "react-router-dom";
-import { accessories } from "../data/data-accessories";
 import ProductItem from "./ProductItem";
-import FilterOptions from "./dataOperations/FilterOptions";
-import SortOptions from "./dataOperations/SortOptions";
 import Loader from "../components/ui/loader/Loader";
+import SortOptions from "./dataOperations/SortOptions";
+import FilterOptions from "./dataOperations/FilterOptions";
+
+import { useFilteredData } from "../hooks/useFilteredData";
 
 function ProductsList() {
-  const data = accessories;
-  const [searchParams] = useSearchParams();
-
-  //Filter accessories
-  const filterValue = searchParams.get("category");
-  let filteredProducts;
-
-  if (filterValue === "all") filteredProducts = data;
-  if (filterValue === "cases")
-    filteredProducts = data.filter((item) => item.category === "cases");
-  if (filterValue === "bands")
-    filteredProducts = data.filter((item) => item.category === "bands");
-  if (filterValue === "chargers")
-    filteredProducts = data.filter((item) => item.category === "chargers");
-  if (filterValue === "cables")
-    filteredProducts = data.filter((item) => item.category === "cables");
-
-  //Sort accessories
-  const sortBy = searchParams.get("sortBy") || "id-asc";
-  const [field, direction] = sortBy.split("-");
-
-  const sortedProducts = filteredProducts?.sort((a, b) => {
-    const modifier = direction === "asc" ? 1 : -1;
-
-    if (field === "id") {
-      return (a.id - b.id) * modifier;
-    }
-
-    if (field === "price") {
-      return Number(a.price - b.price) * modifier;
-    }
-
-    if (field === "title") {
-      return a.title.localeCompare(b.title) * modifier;
-    }
-    return 0;
-  });
+  const { sortedProducts } = useFilteredData();
 
   return !sortedProducts ? (
     <Loader />
@@ -69,6 +33,7 @@ function ProductsList() {
 }
 
 export default ProductsList;
+
 // ===============================================
 // <section className="bg-white">
 //   <div className="py-16 sm:py-24 lg:mx-auto lg:max-w-7xl lg:px-8">

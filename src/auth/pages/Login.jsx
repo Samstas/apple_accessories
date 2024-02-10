@@ -1,19 +1,6 @@
 import { Link } from "react-router-dom";
 
-/*
-This example requires some changes to your config:
 
-```
-// tailwind.config.js
-module.exports = {
-// ...
-plugins: [
-// ...
-require('@tailwindcss/forms'),
-],
-}
-```
-*/
 function Login() {
   return (
     <section className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
@@ -85,7 +72,7 @@ function Login() {
         </form>
 
         <p className="mt-10 text-center text-sm text-gray-500">
-          Want to registrate?
+          Want to register?
           <Link
             to="/signup"
             className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500 ml-1"
