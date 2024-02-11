@@ -42,7 +42,7 @@ function Navbar() {
           </Link>
         </li>
         <li>
-          <Link to="/login">
+          <Link to="/profile">
             <BiUser size="24" color="#2a2a2a" className="cursor-pointer" />
           </Link>
         </li>

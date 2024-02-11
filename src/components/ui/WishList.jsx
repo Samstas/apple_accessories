@@ -1,10 +1,12 @@
-import { GiHeartMinus } from "react-icons/gi";
-import { useWishList } from "../../hooks/useWishList";
+// import { GiHeartMinus } from "react-icons/gi";
 import { Link } from "react-router-dom";
+
+import { useWishList } from "../../hooks/useWishList";
+
 import EmptyWishlist from "./EmptyWishlist";
 
 function WishList() {
-  const { wishList, handleRemoveItemFromWishList } = useWishList();
+  const { wishList, onRemoveItemFromWishList } = useWishList();
 
   console.log(wishList);
   return (
@@ -42,7 +44,7 @@ function WishList() {
                     </div>
                   </Link>
                   <button
-                    onClick={() => handleRemoveItemFromWishList(id)}
+                    onClick={() => onRemoveItemFromWishList(id)}
                     className="px-3 py-1 mt-2  text-red-600 active:text-red-800 hover:border rounded border-red-600"
                   >
                     remove

@@ -10,6 +10,7 @@ import AuthLayout from "./auth/AuthLayout";
 import Login from "./auth/pages/Login";
 import SignUp from "./auth/pages/SignUp";
 import TestNewProductList from "./components/TestNewProductList";
+import ProfilePage from "./app/pages/ProfilePage";
 
 // ❌ Add function to convert currency
 // ❌ Refactor code/ create context or custom hooks
@@ -39,6 +40,7 @@ function App() {
           <Route path="accessories/:id" element={<ProductInfoPage />} />
           <Route path="cart" element={<ShoppingCartPage />} />
           <Route path="wishlist" element={<WishListPage />} />
+          <Route path="profile" element={<ProfilePage />} />
 
           {/* Testing Products List  */}
           <Route path="test" element={<TestNewProductList />} />
