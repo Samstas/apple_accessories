@@ -19,6 +19,15 @@ import ProfilePage from "./app/pages/ProfilePage";
 // ❌ Make Authentication with Firebase
 // ❌ Add react-toaster for notifications
 // ❌ Change style of all buttons, bg, border-radius, hover, active ...
+// - Button style,
+// - Background color
+// - Search Input
+// - Favicon
+// - Selector with options Design
+// - Responsiveness
+
+// ❌ Add Loader, when products list loading
+// ❌ OnClick Checkout check if isAuth true, next step...
 
 function App() {
   return (

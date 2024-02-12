@@ -19,21 +19,27 @@ function SearchField() {
       }}
     >
       <label className="relative block">
-        {/* <span>&times;</span> */}
+        <span
+          onClick={handleSearch}
+          className="absolute top-[6px] left-2 cursor-pointer text-zinc-600"
+        >
+          <BiSearch color="#a7a1aa" size="20px" />
+        </span>
         <input
-          className=" w-[180px] sm:w-full bg-gray-200 rounded-md py-1 pl-3 pr-10 focus:outline-zinc-300 "
+          className=" w-[180px] sm:w-full placeholder-zinc-400 bg-zinc-200 rounded-md py-1 pl-8 pr-10 focus:outline-zinc-600 "
           placeholder="Search"
           type="text"
           value={searchField}
           onChange={(e) => setSearchField(e.target.value)}
         />
-
-        <span
-          onClick={handleSearch}
-          className="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer hover:scale-105"
-        >
-          <BiSearch color="#a2a2a2" size="20px" />
-        </span>
+        {searchField ? (
+          <span
+            onClick={() => setSearchField("")}
+            className="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer text-zinc-700  hover:text-red-600"
+          >
+            &times;
+          </span>
+        ) : null}
       </label>
     </form>
   );

@@ -19,9 +19,13 @@ function SortOptions() {
   }
 
   return (
-    <select value={sortBy} onChange={handleChange}>
+    <select
+      className="bg-inherit border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-zinc-700 focus:border-zinc-500  p-2.5 transition ease-in-out duration-150"
+      value={sortBy}
+      onChange={handleChange}
+    >
       {sortOptions.map(({ id, label, value }) => (
-        <option key={id} value={value}>
+        <option key={id} value={value} className="bg-[#eee]">
           {label}
         </option>
       ))}

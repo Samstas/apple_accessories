@@ -9,7 +9,7 @@ function EmptyWishlist() {
     //   <BsFillCartDashFill />
     //
     // </section>
-    <section className="flex justify-center items-center flex-col mt-6 text-[#ccc] h-[50vh]">
+    <section className="flex justify-center items-center flex-col mt-6 text-zinc-300 h-[50vh]">
       
       <GiHeartMinus size={200} />
       <h1 className="text-xl uppercase mt-4 mb-4">Your wishlist is empty!</h1>

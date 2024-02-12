@@ -6,7 +6,7 @@ function EmptyCart() {
 
   return (
     
-    <section className="flex justify-center items-center flex-col mt-6 text-[#ccc] h-[50vh]">
+    <section className="flex justify-center items-center flex-col mt-6 text-zinc-300 h-[50vh]">
       <BsFillCartDashFill size={200} />
       <h1 className="text-xl uppercase mt-4 mb-4">Your cart is empty!</h1>
       <button

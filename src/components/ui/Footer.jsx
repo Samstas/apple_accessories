@@ -1,5 +1,33 @@
+import { FaUserCircle } from "react-icons/fa";
+import { BsLinkedin } from "react-icons/bs";
+import { BsInstagram } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
 import { AiOutlineApple } from "react-icons/ai";
 import { Link } from "react-router-dom";
+// w5 h5 ml-3
+// target=_blank
+const socialLinks = [
+  {
+    title: "GitHub",
+    icon: <BsGithub size={20} color="#a1a1b0" />,
+    url: "https://github.com/Samstas",
+  },
+  {
+    title: "Instagram",
+    icon: <BsInstagram size={20} color="#a1a1b0" />,
+    url: "https://www.instagram.com/sam.stas",
+  },
+  {
+    title: "Website Portfolio",
+    icon: <FaUserCircle size={20} color="#a1a1b0" />,
+    url: "https://stas-samozvan.vercel.app",
+  },
+  {
+    title: "LinkedIn",
+    icon: <BsLinkedin size={20} color="#a1a1b0" />,
+    url: "https://www.linkedin.com/in/stas-samozvan-ab9528290",
+  },
+];
 
 function Footer() {
   return (
@@ -14,63 +42,15 @@ function Footer() {
         <p className="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
           &copy; 2024 Apple Accessories. All rights reserved.
         </p>
-        {/* <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-          <a className="text-gray-400">
-            <svg
-              fill="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              className="w-5 h-5"
-              viewBox="0 0 24 24"
-            >
-              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-            </svg>
-          </a>
-          <a className="ml-3 text-gray-400">
-            <svg
-              fill="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              className="w-5 h-5"
-              viewBox="0 0 24 24"
-            >
-              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-            </svg>
-          </a>
-          <a className="ml-3 text-gray-400">
-            <svg
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              className="w-5 h-5"
-              viewBox="0 0 24 24"
-            >
-              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-            </svg>
-          </a>
-          <a className="ml-3 text-gray-400">
-            <svg
-              fill="currentColor"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="0"
-              className="w-5 h-5"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke="none"
-                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
-              ></path>
-              <circle cx="4" cy="4" r="2" stroke="none"></circle>
-            </svg>
-          </a>
-        </span> */}
+        <ul className="inline-flex gap-2 sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+          {socialLinks.map((link) => (
+            <li key={link.title}>
+              <Link to={link.url} target="_blank" title={link.title}>
+                {link.icon}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </footer>
   );

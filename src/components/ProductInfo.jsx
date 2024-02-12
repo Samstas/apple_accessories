@@ -52,10 +52,10 @@ function ProductInfo() {
         <div className="lg:w-4/5 mx-auto flex flex-wrap">
           <img
             alt={`Image ${title}`}
-            className="lg:w-1/2 w-full lg:h-auto  object-cover object-center rounded"
+            className="xl:w-1/2 w-full lg:h-auto  object-cover object-center rounded"
             src={image}
           />
-          <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+          <div className="xl:w-1/2 w-full xl:pl-10 xl:py-6 mt-6 xl:mt-0">
             <h2 className="text-sm title-font text-gray-500 tracking-widest uppercase">
               {category}
             </h2>
@@ -124,20 +124,20 @@ function ProductInfo() {
             </div>
           </div>
         </div> */}
-            <div className="flex">
-              <span className="title-font font-medium text-2xl text-gray-900">
+            <div className="flex mt-10">
+              <span className="title-font font-medium text-3xl text-zinc-800 ">
                 ${price}
               </span>
               <button
                 onClick={() => navigate("/")}
-                className="flex ml-auto text-white bg-zinc-800 border-0 py-2 px-6 focus:outline-none hover:bg-zinc-700 rounded mr-1"
+                className="flex items-center sm:ml-auto ml-3 text-white bg-zinc-800 border-0 lg:py-2 lg:px-6 sm:py-1 sm:px-4 px-3 text-sm md:text-[1rem] py-2 focus:outline-none hover:bg-zinc-700 rounded mr-1 "
               >
-                Back to store
+                &larr; Back to store
               </button>
               {isItemAlreadyInsideCart ? (
                 <button
                   onClick={() => navigate("/cart")}
-                  className="flex  text-white bg-zinc-800 border-0 py-2 px-6 focus:outline-none hover:bg-zinc-700 rounded"
+                  className="flex items-center  ml-1 text-white bg-zinc-800 border-0 lg:py-2 lg:px-6 sm:py-1 sm:px-4 px-3 text-sm md:text-[1rem] py-2 focus:outline-none hover:bg-zinc-700 rounded mr-1"
                 >
                   Go to cart
                 </button>
@@ -146,7 +146,7 @@ function ProductInfo() {
                   onClick={() =>
                     onAddToCart(id, image, title, quantity, price, totalPrice)
                   }
-                  className="flex  text-white bg-zinc-800 border-0 py-2 px-6 focus:outline-none hover:bg-zinc-700 rounded"
+                  className="flex items-center  ml-1 text-white bg-zinc-800 border-0 lg:py-2 lg:px-6 sm:py-1 sm:px-4 px-3 text-sm md:text-[1rem] py-2 focus:outline-none hover:bg-zinc-700 rounded mr-1"
                 >
                   Add to cart
                 </button>

@@ -17,12 +17,12 @@ function FilterOptions({ filterField }) {
   }
 
   return (
-    <ul className="flex items-center gap-2 ">
+    <ul className="flex items-center gap-2 mb-3 md:mb-4 sm:mb-0">
       {filterOptions.map(({ id, label, value }) => (
         <li key={id}>
           <button
             onClick={() => handleSetOptionValue(value)}
-            className={`border-[2px] py-[2px] px-[4px] text-sm sm:text-base sm:py-1 sm:px-3 rounded-md text-zinc-800  border-zinc-800  hover:bg-zinc-700 hover:text-zinc-200 ${
+            className={`border-[1px]  text-sm  py-1 px-3 rounded-md text-zinc-700  border-zinc-300  hover:bg-zinc-500 hover:text-zinc-200 ${
               currentValue === value ? "active" : ""
             }`}
             disabled={currentValue === value}

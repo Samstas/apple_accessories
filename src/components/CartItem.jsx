@@ -34,7 +34,7 @@ function CartItem({ accessoryItem }) {
       <td className="font-medium px-4 sm:px-6 py-4">
         <button
           onClick={() => onRemoveItem(id)}
-          className="text-xl text-red-600"
+          className="text-xl text-red-500 hover:text-red-700"
         >
           &times;
         </button>

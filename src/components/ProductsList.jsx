@@ -1,3 +1,4 @@
+import { FaSearchMinus } from "react-icons/fa";
 import ProductItem from "./ProductItem";
 import Loader from "../components/ui/loader/Loader";
 import SortOptions from "./dataOperations/SortOptions";
@@ -11,9 +12,10 @@ function ProductsList() {
   return !sortedProducts ? (
     <Loader />
   ) : (
-    <section className="text-gray-400 body-font">
+    // Change setcion style
+    <section className="text-gray-400 body-font flex flex-col items-center">
       {/* Filter and Sort field  */}
-      <div className="flex justify-between items-center mt-8 px-6 ">
+      <div className="mt-8 px-6 flex flex-col items-center md:justify-between ">
         {/* FILTERING  */}
         <FilterOptions filterField="category" />
         {/* SORTING  */}
@@ -22,11 +24,21 @@ function ProductsList() {
 
       {/* Products List Block  */}
       <div className="container px-5 py-10 mx-auto">
-        <ul className="flex flex-wrap -m-4">
-          {sortedProducts?.map((product) => (
-            <ProductItem key={product.id} item={product} />
-          ))}
-        </ul>
+        {sortedProducts.length === 0 ? (
+          <section className="flex flex-col justify-center items-center gap-4 text-zinc-300 uppercase">
+            <FaSearchMinus size={200} />
+            <h1 className="text-center">
+              Sorry, no matches were found.
+              <br /> Try a new search
+            </h1>
+          </section>
+        ) : (
+          <ul className="flex flex-wrap -m-4">
+            {sortedProducts?.map((product) => (
+              <ProductItem key={product.id} item={product} />
+            ))}
+          </ul>
+        )}
       </div>
     </section>
   );
