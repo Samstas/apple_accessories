@@ -4,10 +4,10 @@ function ProductItem({ item }) {
   const { id, title, image, price } = item;
 
   return (
-    <li className="lg:w-1/4 md:w-1/2 p-3 w-full text-center hover:scale-[1.01] cursor-pointer hover:transition-all ease-in hover:ease-in rounded-md hover:duration-200 duration-200">
+    <li className="xl:w-1/4 lg:w-1/3 md:w-1/2 p-3 w-full text-center hover:scale-[1.01] cursor-pointer hover:transition-all ease-in hover:ease-in rounded-md hover:duration-200 duration-200">
       <Link
         to={`${id}`}
-        className="flex flex-col bg-white rounded-xl py-5 px-1 h-full shadow hover:shadow-md "
+        className="flex flex-col bg-white rounded-xl pt-5 pb-6 px-1 h-full shadow-md hover:shadow-xl transition ease-in delay-75"
       >
         <div className="w-full overflow-hidden bg-gray-200">
           <img
@@ -21,7 +21,7 @@ function ProductItem({ item }) {
             {category}
           </h3> */}
           <h2 className="text-gray-400 text-m">{title}</h2>
-          <p className="mt-1 text-zinc-500">${price}</p>
+          <p className="mt-2 text-zinc-700 text-[1.1rem]">${price}</p>
         </div>
       </Link>
     </li>

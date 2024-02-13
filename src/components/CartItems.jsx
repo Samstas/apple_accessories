@@ -17,13 +17,13 @@ function CartItems() {
           {/* Table head  */}
           <thead>
             <tr className="uppercase text-xs sm:text-sm border-b">
-              <th className="font-normal text-zinc-400 px-6 py-4">Product</th>
-              <th className="font-normal text-zinc-400 px-6 py-4">Name</th>
-              <th className="font-normal text-zinc-400 px-6 py-4">Quantity</th>
-              <th className="font-normal text-zinc-400 px-6 py-4 hidden sm:table-cell">
+              <th className="font-normal w-0 text-zinc-400 md:px-6 md:py-4 px-2 py-1">Product</th>
+              <th className="font-normal w-0 text-zinc-400 md:px-6 md:py-4 px-2 py-1">Name</th>
+              <th className="font-normal w-0 text-zinc-400 md:px-6 md:py-4 px-2 py-1">Quantity</th>
+              <th className="font-normal w-0 text-zinc-400 px-6 py-4 hidden sm:table-cell">
                 Price
               </th>
-              <th className="font-normal text-zinc-400 px-6 py-4">Remove</th>
+              <th className="font-normal w-0 text-zinc-400 md:px-6 md:py-4 px-2 py-1">Remove</th>
             </tr>
           </thead>
           {/* Table Body  */}

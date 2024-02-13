@@ -26,7 +26,7 @@ function SearchField() {
           <BiSearch color="#a7a1aa" size="20px" />
         </span>
         <input
-          className=" w-[180px] sm:w-full placeholder-zinc-400 bg-zinc-200 rounded-md py-1 pl-8 pr-10 focus:outline-zinc-600 "
+          className=" w-[180px] sm:w-full placeholder-zinc-400 bg-zinc-200 rounded-md py-1 pl-8 pr-8 focus:outline-zinc-600 "
           placeholder="Search"
           type="text"
           value={searchField}

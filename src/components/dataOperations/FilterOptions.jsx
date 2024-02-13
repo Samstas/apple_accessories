@@ -22,7 +22,7 @@ function FilterOptions({ filterField }) {
         <li key={id}>
           <button
             onClick={() => handleSetOptionValue(value)}
-            className={`border-[1px]  text-sm  py-1 px-3 rounded-md text-zinc-700  border-zinc-300  hover:bg-zinc-500 hover:text-zinc-200 ${
+            className={`border-[1px]  text-sm  py-1 px-2 rounded-md text-zinc-700  border-zinc-300  hover:bg-zinc-500 hover:text-zinc-200 transition ease-in delay-75 ${
               currentValue === value ? "active" : ""
             }`}
             disabled={currentValue === value}

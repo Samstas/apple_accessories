@@ -154,7 +154,7 @@ function ProductInfo() {
 
               <button
                 onClick={() => handleToggle(id, image, title, price)}
-                className={`rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4 hover:scale-110 hover:bg-red-500 active:scale-90 ${
+                className={`rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4 hover:scale-110 hover:bg-red-500 active:scale-90 transition ease-in  ${
                   itemInsideWishList ? "bg-red-500" : ""
                 }`}
               >

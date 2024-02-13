@@ -6,8 +6,8 @@ function CartItem({ accessoryItem }) {
   const { onIncreaseQuantity, onDecreaseQuantity, onRemoveItem } = useCart();
 
   return (
-    <tr className="text-sm sm:text-base text-gray-600 text-center">
-      <td className="px-4 sm:px-6 py-4 flex items-center font-medium  ">
+    <tr className="text-sm sm:text-base text-zinc-600 text-center">
+      <td className="px sm:px-6 py-4 flex items-center font-medium  ">
         <img src={image} alt="img" className="sm:inline-flex  w-[200px]" />
       </td>
 
@@ -28,7 +28,7 @@ function CartItem({ accessoryItem }) {
       </td>
 
       <td className="text-base font-light px-4 sm:px-6 py-4 hidden sm:table-cell">
-        $ <span className="text-lg">{totalPrice}</span>
+        $<span className="text-lg">{totalPrice}</span>
       </td>
 
       <td className="font-medium px-4 sm:px-6 py-4">
