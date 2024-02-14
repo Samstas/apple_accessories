@@ -15,14 +15,16 @@ function WishList() {
         <EmptyWishlist />
       ) : (
         <>
-          <h1 className="text-center text-xl font-bold mt-4">Your Wishlist</h1>
+          <h1 className="text-center text-xl font-bold text-zinc-300 mt-4">
+            My Wishlist
+          </h1>
           {/* Products List Block  */}
           <div className="container px-5 py-10 mx-auto">
             <ul className="flex flex-wrap -m-4">
               {wishList?.map(({ id, image, title, price }) => (
                 <li
                   key={id}
-                  className="relative xl:w-1/4 lg:w-1/3 md:w-1/2 p-3 w-full text-center hover:scale-[1.01] cursor-pointer hover:transition-all ease-in hover:ease-in rounded-md hover:duration-200 duration-200 sm:mb-0 mb-6"
+                  className="relative xl:w-1/4 lg:w-1/3 md:w-1/2 p-3 w-full text-center hover:scale-[1.01] cursor-pointer hover:transition-all ease-in hover:ease-in rounded-md hover:duration-200 duration-200 sm:mb-0 "
                 >
                   <Link
                     to={`/accessories/${id}`}
@@ -44,13 +46,13 @@ function WishList() {
                         ${price}
                       </p>
                     </div>
+                  </Link>
                   <button
                     onClick={() => onRemoveItemFromWishList(id)}
-                    className="absolute right-1 top-3 px-3 py-1 mt-2  text-red-600 active:text-red-800 hover:border rounded border-red-600 border text-2xl "
+                    className="absolute  right-4 top-4 px-3 text-red-600 active:text-red-800 hover:border rounded-[0.6rem] text-3xl sm:text-xl "
                   >
-                   &times;
+                    &times;
                   </button>
-                  </Link>
                 </li>
               ))}
             </ul>

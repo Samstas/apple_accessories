@@ -9,6 +9,7 @@ import { useCart } from "../context/CartContext";
 import { getCart } from "../redux/slices/cartSlice";
 import { useWishList } from "../hooks/useWishList";
 import { accessories } from "../data/data-accessories";
+import { formatCurrency } from "../utils/formatCurrency";
 
 function ProductInfo() {
   const { id } = useParams();
@@ -125,19 +126,19 @@ function ProductInfo() {
           </div>
         </div> */}
             <div className="flex mt-10">
-              <span className="title-font font-medium text-3xl text-zinc-800 ">
-                ${price}
+              <span className="title-font font-medium sm:text-3xl text-lg text-zinc-800 mr-2">
+                {formatCurrency(price)}
               </span>
               <button
                 onClick={() => navigate("/")}
-                className="flex items-center sm:ml-auto ml-3 text-white bg-zinc-800 border-0 lg:py-2 lg:px-6 sm:py-1 sm:px-4 px-3 text-sm md:text-[1rem] py-2 focus:outline-none hover:bg-zinc-700 rounded mr-1 "
+                className="flex items-center ml-auto hover:text-white hover:bg-zinc-700 text-zinc-700 bg-inherit border border-zinc-700 transition ease-in delay-75  lg:py-2 lg:px-6 sm:py-1 sm:px-4 px-2 text-sm md:text-[1rem] py-2 focus:outline-none rounded mr-1 "
               >
                 &larr; Back to store
               </button>
               {isItemAlreadyInsideCart ? (
                 <button
                   onClick={() => navigate("/cart")}
-                  className="flex items-center  ml-1 text-white bg-zinc-800 border-0 lg:py-2 lg:px-6 sm:py-1 sm:px-4 px-3 text-sm md:text-[1rem] py-2 focus:outline-none hover:bg-zinc-700 rounded mr-1"
+                  className="flex items-center  ml-1 bg-zinc-700 text-white hover:text-zinc-700 hover:bg-inherit hover:border hover:border-zinc-700 transition ease-in delay-75 lg:py-2 lg:px-6 sm:py-1 sm:px-4 px-2 text-sm md:text-[1rem] py-2 focus:outline-none  rounded mr-1"
                 >
                   Go to cart
                 </button>
@@ -146,7 +147,7 @@ function ProductInfo() {
                   onClick={() =>
                     onAddToCart(id, image, title, quantity, price, totalPrice)
                   }
-                  className="flex items-center  ml-1 text-white bg-zinc-800 border-0 lg:py-2 lg:px-6 sm:py-1 sm:px-4 px-3 text-sm md:text-[1rem] py-2 focus:outline-none hover:bg-zinc-700 rounded mr-1"
+                  className="flex items-center  ml-1  bg-zinc-700 text-white hover:border  hover:text-zinc-700 hover:bg-inherit hover:border-zinc-700 transition ease-in delay-75 lg:py-2 lg:px-6 sm:py-1 sm:px-4 px-3 text-sm md:text-[1rem] py-2 focus:outline-none rounded mr-1"
                 >
                   Add to cart
                 </button>
@@ -154,7 +155,7 @@ function ProductInfo() {
 
               <button
                 onClick={() => handleToggle(id, image, title, price)}
-                className={`rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4 hover:scale-110 hover:bg-red-500 active:scale-90 transition ease-in  ${
+                className={`rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 sm:ml-4 ml-1 hover:scale-110 hover:bg-red-500 active:scale-90 transition ease-in  ${
                   itemInsideWishList ? "bg-red-500" : ""
                 }`}
               >

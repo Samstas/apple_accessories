@@ -2,7 +2,7 @@ import { useSearchParams } from "react-router-dom";
 
 const sortOptions = [
   //❗value call like in json object - id /and way of sort - asc/desc❗
-  { id: 1, value: "id-asc", label: "Default" }, //value id
+  { id: 1, value: "id-asc", label: "Sorted by default" }, //value id
   { id: 2, value: "price-asc", label: "Price: Low to High" }, // value price
   { id: 2, value: "price-desc", label: "Price: High to Low" }, // value price
   { id: 3, value: "title-asc", label: "Name: (A-Z)" }, //value name
@@ -20,12 +20,12 @@ function SortOptions() {
 
   return (
     <select
-      className="bg-inherit border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-zinc-700 focus:border-zinc-500  p-2.5 transition ease-in-out duration-150"
+      className="bg-inherit border border-gray-300 text-gray-900 text-[0.9rem] xl:text-[1rem] rounded-lg focus:ring-zinc-700 focus:border-zinc-500  p-2.5 lg:py-2 lg:px-4  transition ease-in-out duration-150"
       value={sortBy}
       onChange={handleChange}
     >
       {sortOptions.map(({ id, label, value }) => (
-        <option key={id} value={value} className="bg-[#eee]">
+        <option key={id} value={value} className="bg-[#eee] ">
           {label}
         </option>
       ))}

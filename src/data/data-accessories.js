@@ -25,7 +25,7 @@ export const accessories = [
   },
   {
     id: 3,
-    title: "USB-C to MagSafe 3 Cable (2 m) - Gray",
+    title: "USB-C to MagSafe 3 Cable - Gray",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
     category: "cables",
@@ -50,7 +50,7 @@ export const accessories = [
 
   {
     id: 5,
-    title: "Belkin 3-in-1 Wireless Charging Stand",
+    title: "Belkin Wireless Charging Stand",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
     category: "chargers",
@@ -63,16 +63,17 @@ export const accessories = [
 
   {
     id: 6,
-    title: "Twelve South HiRise 3-in-1 Charging Stand",
+    title: "FineWoven Case Mulberry ",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
-    category: "chargers",
-    price: 149,
+    category: "cases",
+    price: 59,
     totalPrice: null,
     quantity: 1,
-    image: "/src/data/accessories-imgs/chargers/hirise-charger-stand.jpeg",
+    image: "/src/data/accessories-imgs/cases/finewoven-case-mulberry.jpeg",
     discount: null,
   },
+
   {
     id: 7,
     title: "Belkin 2-in-1 Charger Stand",
@@ -100,7 +101,7 @@ export const accessories = [
   },
   {
     id: 9,
-    title: "Twelve South ButterFly 2-in-1 USB-C Charger",
+    title: "Twelve South ButterFly  Charger",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
     category: "chargers",
@@ -160,21 +161,23 @@ export const accessories = [
     image: "/src/data/accessories-imgs/cases/silicon-case-yellow.jpeg",
     discount: null,
   },
+
   {
     id: 14,
-    title: "Starlight Sport Band",
+    title: "Belkin Wireless Charging Pad",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
-    category: "bands",
-    price: 49,
+    category: "chargers",
+    price: 149,
     totalPrice: null,
     quantity: 1,
-    image: "/src/data/accessories-imgs/bands/sport-band-starlight.jpeg",
+    image: "/src/data/accessories-imgs/chargers/belkin-charger-pad.jpeg",
     discount: 5,
   },
+
   {
     id: 15,
-    title: "USB-C to MagSafe 3 Cable (2 m) - Black",
+    title: "USB-C to MagSafe 3 Cable - Black",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
     category: "cables",
@@ -208,18 +211,20 @@ export const accessories = [
     image: "/src/data/accessories-imgs/cases/finewoven-case-taupe.jpeg",
     discount: null,
   },
+
   {
     id: 18,
-    title: "USB-C to MagSafe 3 Cable (2 m) - Starlight",
+    title: "OtterBox Lumen Series Case Gray",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
-    category: "cables",
-    price: 55,
+    category: "cases",
+    price: 49,
     totalPrice: null,
     quantity: 1,
-    image: "/src/data/accessories-imgs/cables/magsafe-cable-starlight.jpeg",
-    discount: 5,
+    image: "/src/data/accessories-imgs/cases/otterbox-case-gray.jpeg",
+    discount: null,
   },
+
   {
     id: 19,
     title: "Olive Alpine Loop",
@@ -232,32 +237,32 @@ export const accessories = [
     image: "/src/data/accessories-imgs/bands/loop-band-olive.jpeg",
     discount: 5,
   },
-
   {
     id: 20,
-    title: "FineWoven Case Mulberry ",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
-    category: "cases",
-    price: 59,
-    totalPrice: null,
-    quantity: 1,
-    image: "/src/data/accessories-imgs/cases/finewoven-case-mulberry.jpeg",
-    discount: null,
-  },
-
-  {
-    id: 21,
-    title: "Belkin 3-in-1 Wireless Charging Pad",
+    title: "Twelve South HiRise Charging Stand",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
     category: "chargers",
     price: 149,
     totalPrice: null,
     quantity: 1,
-    image: "/src/data/accessories-imgs/chargers/belkin-charger-pad.jpeg",
+    image: "/src/data/accessories-imgs/chargers/hirise-charger-stand.jpeg",
+    discount: null,
+  },
+
+  {
+    id: 21,
+    title: "Starlight Sport Band",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
+    category: "bands",
+    price: 49,
+    totalPrice: null,
+    quantity: 1,
+    image: "/src/data/accessories-imgs/bands/sport-band-starlight.jpeg",
     discount: 5,
   },
+
   {
     id: 22,
     title: "Silicone Case Violet",
@@ -331,16 +336,17 @@ export const accessories = [
     image: "/src/data/accessories-imgs/chargers/morphie-charger-travel.jpeg",
     discount: null,
   },
+
   {
     id: 28,
-    title: "OtterBox Lumen Series Case Gray",
+    title: "USB-C to MagSafe 3 Cable - Starlight",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aperiam aliquam corporis illum magni in perspiciatis, id nesciunt, nisi cumque sequi veniam. Totam nobis illo ipsam non earum velit quod.",
-    category: "cases",
-    price: 49,
+    category: "cables",
+    price: 55,
     totalPrice: null,
     quantity: 1,
-    image: "/src/data/accessories-imgs/cases/otterbox-case-gray.jpeg",
-    discount: null,
+    image: "/src/data/accessories-imgs/cables/magsafe-cable-starlight.jpeg",
+    discount: 5,
   },
 ];

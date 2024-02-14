@@ -9,22 +9,22 @@ import { Link } from "react-router-dom";
 const socialLinks = [
   {
     title: "GitHub",
-    icon: <BsGithub size={20} color="#a1a1b0" />,
+    icon: <BsGithub size={20} color="#a1a3af" />,
     url: "https://github.com/Samstas",
   },
   {
     title: "Instagram",
-    icon: <BsInstagram size={20} color="#a1a1b0" />,
+    icon: <BsInstagram size={20} color="#a1a3af" />,
     url: "https://www.instagram.com/sam.stas",
   },
   {
     title: "Website Portfolio",
-    icon: <FaUserCircle size={20} color="#a1a1b0" />,
+    icon: <FaUserCircle size={20} color="#a1a3af" />,
     url: "https://stas-samozvan.vercel.app",
   },
   {
     title: "LinkedIn",
-    icon: <BsLinkedin size={20} color="#a1a1b0" />,
+    icon: <BsLinkedin size={20} color="#a1a3af" />,
     url: "https://www.linkedin.com/in/stas-samozvan-ab9528290",
   },
 ];
@@ -45,7 +45,7 @@ function Footer() {
         <ul className="inline-flex gap-2 sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
           {socialLinks.map((link) => (
             <li key={link.title}>
-              <Link to={link.url} target="_blank" title={link.title}>
+              <Link className="hover:opacity-75 transition ease-in" to={link.url} target="_blank" title={link.title}>
                 {link.icon}
               </Link>
             </li>

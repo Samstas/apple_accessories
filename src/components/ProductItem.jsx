@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { formatCurrency } from "../utils/formatCurrency";
+import { useEffect, useState } from "react";
 
 function ProductItem({ item }) {
   const { id, title, image, price } = item;
@@ -9,7 +11,7 @@ function ProductItem({ item }) {
         to={`${id}`}
         className="flex flex-col bg-white rounded-xl pt-5 pb-6 px-1 h-full shadow-md hover:shadow-xl transition ease-in delay-75"
       >
-        <div className="w-full overflow-hidden bg-gray-200">
+        <div className="w-full overflow-hidden bg-white">
           <img
             src={image}
             alt=""
@@ -20,8 +22,10 @@ function ProductItem({ item }) {
           {/* <h3 className="text-white text-xs tracking-widest title-font mb-1 uppercase">
             {category}
           </h3> */}
-          <h2 className="text-gray-400 text-m">{title}</h2>
-          <p className="mt-2 text-zinc-700 text-[1.1rem]">${price}</p>
+          <h2 className="text-gray-400 text-m px-3">{title}</h2>
+          <p className="mt-2 text-zinc-700 text-[1.1rem]">
+            {formatCurrency(price)}
+          </p>
         </div>
       </Link>
     </li>
