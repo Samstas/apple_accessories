@@ -7,6 +7,7 @@ import {
   removeItem,
 } from "../redux/slices/cartSlice";
 import { useSelector, useDispatch } from "react-redux";
+import { toast } from "react-hot-toast";
 
 const CartContext = createContext();
 
@@ -30,12 +31,14 @@ function CartProvider({ children }) {
 
     dispatch(addToCart(item));
 
-    alert(`you add accessory ${title}`);
+    toast.success(`You added accessory ${title} to Cart`);
   }
 
   // Delete Item from Cart
   function handleRemoveItem(itemId) {
     dispatch(removeItem(itemId));
+
+    toast.error(`You removed item from Cart`);
   }
   // Increase Quantity of Item
   function handleIncreaseQuantity(itemId) {

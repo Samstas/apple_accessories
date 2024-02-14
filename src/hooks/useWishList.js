@@ -1,5 +1,6 @@
 // import { useState } from "react";
 import { useLocalStorage } from "./useLocalStorage";
+import { toast } from "react-hot-toast";
 
 export function useWishList() {
   const [wishList, setWishList] = useLocalStorage([], "wishlist");
@@ -24,7 +25,7 @@ export function useWishList() {
       setWishList([...wishList, wishProduct]);
     }
 
-    // alert(`✅You added ${title} to wishlist 🔖`);
+    toast.success(`You added ${title} to wishlist`);
   }
 
   // Remove item from wishlist
@@ -32,6 +33,7 @@ export function useWishList() {
     const newWishList = wishList.filter((item) => item.id !== productId);
 
     setWishList(newWishList);
+    toast.error(`You removed item from wishlist`)
   }
 
   console.log(wishList);
