@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useWishList } from "../../hooks/useWishList";
 
 import EmptyWishlist from "./EmptyWishlist";
+import { formatCurrency } from "../../utils/formatCurrency";
 
 function WishList() {
   const { wishList, onRemoveItemFromWishList } = useWishList();
@@ -33,7 +34,7 @@ function WishList() {
                     <div className="w-full overflow-hidden bg-gray-200">
                       <img
                         src={image}
-                        alt=""
+                        alt={title}
                         className="h-full w-full object-cover object-center group-hover:opacity-75"
                       />
                     </div>
@@ -43,13 +44,13 @@ function WishList() {
                    </h3> */}
                       <h2 className="text-gray-400 text-m">{title}</h2>
                       <p className="mt-2 text-zinc-700 text-[1.1rem]">
-                        ${price}
+                        {formatCurrency(price)}
                       </p>
                     </div>
                   </Link>
                   <button
                     onClick={() => onRemoveItemFromWishList(id)}
-                    className="absolute  right-4 top-4 px-3 text-red-600 active:text-red-800 hover:border rounded-[0.6rem] text-3xl sm:text-xl "
+                    className="absolute  right-4 top-4 px-3 text-red-600 active:text-red-800 hover:border rounded-[0.6rem] text-3xl sm:text-xl"
                   >
                     &times;
                   </button>

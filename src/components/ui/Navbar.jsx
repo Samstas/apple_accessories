@@ -30,7 +30,7 @@ function Navbar() {
               className="cursor-pointer"
             />
             {cartQuantity ? (
-              <div className=" w-5 h-5 text-center font-bold  absolute -right-2 -top-1 sm:-right-2 sm:-top-1 bg-violet-400 text-zinc-800 text-[12px] rounded-full p-[1px] overflow-hidden">
+              <div className=" w-5 h-5 text-center font-bold  absolute -right-2 -top-1 sm:-right-2 sm:-top-1 bg-orange-400 text-zinc-800 text-[12px] rounded-full p-[1px] overflow-hidden">
                 {cartQuantity}
               </div>
             ) : null}

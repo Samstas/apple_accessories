@@ -3,24 +3,29 @@ import { Navigate } from "react-router-dom";
 import { removeUser } from "../../redux/slices/userSlice";
 
 import { useAuth } from "../../hooks/useAuth";
+import WishList from "../../components/ui/WishList";
 
 function ProfilePage() {
   const dispatch = useDispatch();
-  const { isAuth, userName,  email } = useAuth();
-  console.log(userName);
+  const { isAuth, userName, email } = useAuth();
 
   return isAuth ? (
     <section className="text-center">
-      <h1>Welcome </h1>
-      <p className="text-2xl">Name: {userName}</p>
-      <p>{ email}</p>
-      <hr />
-      <button
-        onClick={() => dispatch(removeUser())}
-        className="border p-2 hover:bg-violet-600"
-      >
-        Log out
-      </button>
+      <div className="border p-3 rounded-lg w-[80%] mx-auto my-10">
+        <h1 className="text-xl mb-3">
+          Welcome <span className="text-orange-400 font-bold uppercase">{userName}</span>{" "}
+          :)
+        </h1>
+
+        <p>Email: {email}</p>
+        <button
+          onClick={() => dispatch(removeUser())}
+          className="border py-2 mt-6 rounded-lg px-5 border-orange-400 transition ease-in hover:shadow  hover:bg-orange-400 text-zinc-800 font-bold"
+        >
+          Log out
+        </button>
+      </div>
+      <WishList />
     </section>
   ) : (
     <Navigate to="/login" />

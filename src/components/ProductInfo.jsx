@@ -155,8 +155,8 @@ function ProductInfo() {
 
               <button
                 onClick={() => handleToggle(id, image, title, price)}
-                className={`rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 sm:ml-4 ml-1 hover:scale-110 hover:bg-red-500 active:scale-90 transition ease-in  ${
-                  itemInsideWishList ? "bg-red-500" : ""
+                className={`rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 sm:ml-4 ml-1 hover:scale-110 hover:bg-orange-500 shadow active:scale-90 transition ease-in  ${
+                  itemInsideWishList ? "bg-orange-400" : ""
                 }`}
               >
                 <BiHeart size="24" color="#2a2a2a" />
