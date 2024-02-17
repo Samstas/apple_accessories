@@ -117,7 +117,7 @@ export default ProductsList;
 // </section>
 
 // ================== TEMPLATE ===================
-{
+// {
   /* <section className="text-gray-400 body-font">
 <div className="container px-5 py-24 mx-auto">
   <div className="flex flex-wrap -m-4">
@@ -142,6 +142,6 @@ export default ProductsList;
   </div>
 </div>
 </section> */
-}
+// }
 
 // ==================
