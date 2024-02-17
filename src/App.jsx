@@ -7,29 +7,30 @@ import ProductInfoPage from "./app/pages/ProductInfoPage";
 import NotFoundPage from "./app/pages/NotFoundPage";
 import WishListPage from "./app/pages/WishListPage";
 import ProfilePage from "./app/pages/ProfilePage";
+import PaymentPage from "./app/pages/PaymentPage";
+import LoginPage from "./auth/pages/LoginPage";
 import AuthLayout from "./auth/AuthLayout";
 import SignUp from "./auth/pages/SignUp";
 import AppLayout from "./app/AppLayout";
-import Login from "./auth/pages/Login";
 
 // ✅ Add function to convert currency
-// ❌ Refactor code/ create context or custom hooks
 // ✅ Set regular colors
 // ✅ Change select style Sorting
 // ✅ Make Authentication with Firebase
-// ❌ Add react-toaster for notifications
+// ✅ Add react-toaster for notifications
 // ✅ Change style of all buttons, bg, border-radius, hover, active ...
 // - ✅ Button style,
 // - ✅ Background color
 // - ✅ Search Input
-// - ❌ Favicon
+// - ✅ Favicon
 // - ✅ Selector with options Design
-// - ❌ Responsiveness
+// - ✅ Responsiveness
 
-// ❌ Add Loader, when products list loading
-// ❌ OnClick Checkout check if isAuth true, next step...
+// ❌ Refactor code/ create context or custom hooks
 // ❌ React Hook Form refactor
-// ❌ Style of Profile Page
+// ✅ Add Loader, when products list loading
+// ✅ OnClick Checkout check if isAuth true, next step...
+// ✅ Style of Profile Page
 
 function App() {
   return (
@@ -37,7 +38,7 @@ function App() {
       <Routes>
         {/* Authorization Layout */}
         <Route element={<AuthLayout />}>
-          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignUp />} />
         </Route>
 
@@ -55,6 +56,8 @@ function App() {
 
           <Route path="*" element={<NotFoundPage />} />
         </Route>
+
+        <Route path="payment" element={<PaymentPage />} />
       </Routes>
 
       <Toaster

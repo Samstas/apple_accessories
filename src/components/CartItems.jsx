@@ -64,7 +64,7 @@ function CartItems() {
             &larr; Back to products
           </Link>
           <Link
-            to={isAuth ? "/profile" : "/login"}
+            to={isAuth ? "/payment" : "/login"}
             className="border py-2 px-3 border-orange-400  rounded-md bg-inherit text-zinc-800 uppercase font-bold  hover:bg-orange-400 hover:border-zinc-700 transition ease-in hover:shadow-md delay-75"
           >
             Checkout
