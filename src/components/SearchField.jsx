@@ -23,7 +23,7 @@ function SearchField() {
           onClick={handleSearch}
           className="absolute top-[6px] left-2 cursor-pointer text-zinc-600"
         >
-          <BiSearch color="#a7a1aa" size="20px" />
+          <BiSearch className="text-zinc-400 text-[1.3rem]"/>
         </span>
         <input
           className=" w-[180px] sm:w-full placeholder-zinc-400 bg-zinc-200 rounded-md py-1 pl-8 pr-8 focus:outline-zinc-600 "
@@ -35,7 +35,7 @@ function SearchField() {
         {searchField ? (
           <span
             onClick={() => setSearchField("")}
-            className="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer text-zinc-700  hover:text-red-600"
+            className="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer text-zinc-700  hover:text-red-600 transition ease-in"
           >
             &times;
           </span>

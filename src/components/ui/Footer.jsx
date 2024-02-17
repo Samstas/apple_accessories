@@ -4,27 +4,34 @@ import { BsInstagram } from "react-icons/bs";
 import { BsGithub } from "react-icons/bs";
 import { AiOutlineApple } from "react-icons/ai";
 import { Link } from "react-router-dom";
-// w5 h5 ml-3
-// target=_blank
+
 const socialLinks = [
   {
     title: "GitHub",
-    icon: <BsGithub size={20} color="#a1a3af" />,
+    icon: (
+      <BsGithub className="text-[1.2rem] text-zinc-400 hover:text-orange-400 transition ease-in" />
+    ),
     url: "https://github.com/Samstas",
   },
   {
     title: "Instagram",
-    icon: <BsInstagram size={20} color="#a1a3af" />,
+    icon: (
+      <BsInstagram className="text-[1.2rem] text-zinc-400 hover:text-orange-400 transition ease-in" />
+    ),
     url: "https://www.instagram.com/sam.stas",
   },
   {
     title: "Website Portfolio",
-    icon: <FaUserCircle size={20} color="#a1a3af" />,
+    icon: (
+      <FaUserCircle className="text-[1.2rem] text-zinc-400 hover:text-orange-400 transition ease-in" />
+    ),
     url: "https://stas-samozvan.vercel.app",
   },
   {
     title: "LinkedIn",
-    icon: <BsLinkedin size={20} color="#a1a3af" />,
+    icon: (
+      <BsLinkedin className="text-[1.2rem] text-zinc-400 hover:text-orange-400 transition ease-in" />
+    ),
     url: "https://www.linkedin.com/in/stas-samozvan-ab9528290",
   },
 ];
@@ -37,7 +44,7 @@ function Footer() {
           to="/accessories?category=all"
           className="flex title-font font-medium items-center md:justify-start justify-center text-[#202020]"
         >
-          <AiOutlineApple size="30" color="#2a2a2a" />
+          <AiOutlineApple className="text-[2rem] text-zinc-700" />
         </Link>
         <p className="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
           &copy; 2024 Apple Accessories. All rights reserved.
@@ -45,7 +52,7 @@ function Footer() {
         <ul className="inline-flex gap-2 sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
           {socialLinks.map((link) => (
             <li key={link.title}>
-              <Link className="hover:opacity-75 transition ease-in" to={link.url} target="_blank" title={link.title}>
+              <Link to={link.url} target="_blank" title={link.title}>
                 {link.icon}
               </Link>
             </li>

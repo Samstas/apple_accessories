@@ -10,8 +10,7 @@ function EmptyWishlist() {
     //
     // </section>
     <section className="flex justify-center items-center flex-col mt-6 text-zinc-300 h-[50vh]">
-      
-      <GiHeartMinus size={200} />
+      <GiHeartMinus className="text-[12.5rem]" />
       <h1 className="text-xl uppercase mt-4 mb-4">Your wishlist is empty!</h1>
       <button
         onClick={() => navigate("/")}

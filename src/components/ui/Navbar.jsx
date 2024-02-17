@@ -24,11 +24,7 @@ function Navbar() {
       <ul className="flex gap-2 items-center">
         <li>
           <Link to="cart" className="relative">
-            <BiShoppingBag
-              size="24"
-              color="#2a2a2a"
-              className="cursor-pointer"
-            />
+            <BiShoppingBag className="cursor-pointer text-[1.5rem] text-zinc-800 hover:text-zinc-600 transition ease-in" />
             {cartQuantity ? (
               <div className=" w-5 h-5 text-center font-bold  absolute -right-2 -top-1 sm:-right-2 sm:-top-1 bg-orange-400 text-zinc-800 text-[12px] rounded-full p-[1px] overflow-hidden">
                 {cartQuantity}
@@ -38,12 +34,12 @@ function Navbar() {
         </li>
         <li>
           <Link to="/wishlist">
-            <BiHeart size="24" color="#2a2a2a" className="cursor-pointer" />
+            <BiHeart className="cursor-pointer text-[1.5rem] text-zinc-800 hover:text-zinc-600 transition ease-in" />
           </Link>
         </li>
         <li>
           <Link to="/profile">
-            <BiUser size="24" color="#2a2a2a" className="cursor-pointer" />
+            <BiUser className="cursor-pointer text-[1.5rem] text-zinc-800 hover:text-zinc-600 transition ease-in" />
           </Link>
         </li>
       </ul>

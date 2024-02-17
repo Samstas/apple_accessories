@@ -13,7 +13,7 @@ function WishList() {
   return (
     <section className="text-gray-400 body-font">
       {wishList?.length === 0 ? (
-        <EmptyWishlist />
+        <EmptyWishlist/>
       ) : (
         <>
           <h1 className="text-center text-xl font-bold text-zinc-300 mt-4">

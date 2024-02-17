@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Logo() {
   return (
     <Link to="/accessories?category=all" className="flex items-center gap-1">
-      <AiOutlineApple size="30" color="#2a2a2a" />
+      <AiOutlineApple className="cursor-pointer text-[2rem] text-zinc-800 hover:text-zinc-600 transition ease-in" />
     </Link>
   );
 }
