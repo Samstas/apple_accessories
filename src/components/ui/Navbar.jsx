@@ -7,10 +7,6 @@ import SearchField from "../SearchField";
 
 import { getCart } from "../../redux/slices/cartSlice";
 
-// const navLinks = [
-//   { title: "Home", path: "/" },
-//   { title: "Products", path: "products" },
-// ];
 
 function Navbar() {
   const cartQuantity = useSelector(getCart).length;

@@ -1,45 +1,20 @@
-import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { setUser } from "../../redux/slices/userSlice";
-import { toast } from "react-hot-toast";
-import { useForm } from "react-hook-form";
+import { BsEyeSlash, BsEye } from "react-icons/bs";
+import { useSignUpLogIn } from "../../hooks/useSignUp&LogIn";
 
 function LoginForm() {
-  const { register, handleSubmit, formState } = useForm();
-  const { errors } = formState;
-  console.log(errors);
-
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-
-  // Handle Submit
-  function handleLogin(data) {
-    const { email, password } = data;
-    const auth = getAuth();
-
-    signInWithEmailAndPassword(auth, email, password)
-      .then(({ user }) => {
-        console.log(user);
-
-        dispatch(
-          setUser({
-            userName: user.displayName,
-            email: user.email,
-            token: user.accessToken,
-            id: user.uid,
-          })
-        );
-
-        toast.success("Successfully Logged In");
-        navigate("/profile");
-      })
-      .catch(() => toast.error("Invalid user!"));
-  }
+  const {
+    errors,
+    isValid,
+    onLogIn,
+    register,
+    handleSubmit,
+    passwordVisible,
+    togglePasswordVisible,
+  } = useSignUpLogIn();
 
   return (
-    <form className="" onSubmit={handleSubmit(handleLogin)}>
-      {/*============ EMAIL Input =============  */}
+    <form onSubmit={handleSubmit(onLogIn)}>
+      {/*============ E-MAIL Input =============  */}
       <input
         id="email"
         type="email"
@@ -54,7 +29,7 @@ function LoginForm() {
           },
         })}
         className="block w-full rounded-md border-0 py-1.5 px-3 text-zinc-800 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6"
-        placeholder="Email..."
+        placeholder="Email"
       />
       {/* Message if Errors */}
       {errors.email && (
@@ -72,18 +47,33 @@ function LoginForm() {
           </a>
         </div>
 
-        <div className="mb-4">
+        <div className="mb-4 relative">
           <input
             id="password"
-            type="password"
+            type={passwordVisible ? "text" : "password"}
             {...register("password", {
-              required: "Password is required",
+              required: {
+                value: true,
+                message: "Password is required",
+              },
             })}
             className="block w-full rounded-md border-0 py-1.5 px-3 text-zinc-800 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6"
-            placeholder="Password..."
+            placeholder="Password"
           />
+          {/* Eye Icon for toggle Password Visible  */}
+          {!passwordVisible ? (
+            <BsEyeSlash
+              onClick={togglePasswordVisible}
+              className="text-zinc-400 absolute top-[11px] right-3 cursor-pointer"
+            />
+          ) : (
+            <BsEye
+              onClick={togglePasswordVisible}
+              className="text-zinc-400 absolute top-[11px] right-3 cursor-pointer"
+            />
+          )}
           {/* Message if Errors */}
-          {errors.email && (
+          {errors.password && (
             <p className="text-red-600 text-sm px-2 py-1">
               {errors.password.message}
             </p>
@@ -91,9 +81,11 @@ function LoginForm() {
         </div>
       </div>
 
+      {/*============ SUBMIT Button =============  */}
       <button
         type="submit"
         className="flex w-full justify-center rounded-md bg-orange-400 px-3 py-1.5 text-sm font-semibold leading-6 text-zinc-700 shadow-sm hover:bg-orange-500  transition ease-in"
+        disabled={!isValid}
       >
         Log In
       </button>

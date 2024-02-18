@@ -8,9 +8,9 @@ import NotFoundPage from "./app/pages/NotFoundPage";
 import WishListPage from "./app/pages/WishListPage";
 import ProfilePage from "./app/pages/ProfilePage";
 import PaymentPage from "./app/pages/PaymentPage";
+import SignUpPage from "./auth/pages/SignUpPage";
 import LoginPage from "./auth/pages/LoginPage";
 import AuthLayout from "./auth/AuthLayout";
-import SignUp from "./auth/pages/SignUp";
 import AppLayout from "./app/AppLayout";
 
 // ✅ Add function to convert currency
@@ -27,7 +27,10 @@ import AppLayout from "./app/AppLayout";
 // - ✅ Responsiveness
 
 // ❌ Refactor code/ create context or custom hooks
-// ❌ React Hook Form refactor
+// ✅ React Hook Form refactor
+// ❌ LocalStorage for User
+// ✅ Make EYE for see password
+
 // ✅ Add Loader, when products list loading
 // ✅ OnClick Checkout check if isAuth true, next step...
 // ✅ Style of Profile Page
@@ -39,7 +42,7 @@ function App() {
         {/* Authorization Layout */}
         <Route element={<AuthLayout />}>
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/signup" element={<SignUp />} />
+          <Route path="/signup" element={<SignUpPage />} />
         </Route>
 
         {/* App Layout */}

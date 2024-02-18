@@ -17,9 +17,6 @@ export function useWishList() {
       price,
     };
 
-    // const isProductAlreadyInWishList = wishList?.some(
-    //   (item) => item.id === productId
-    // );
 
     if (wishProduct) {
       setWishList([...wishList, wishProduct]);

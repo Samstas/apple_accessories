@@ -3,7 +3,7 @@ import { getUser } from "../redux/slices/userSlice";
 
 export function useAuth() {
   const { userName, email, token, id } = useSelector(getUser);
-  console.log(userName);
+  // console.log(userName);
 
   return {
     isAuth: !!email,
