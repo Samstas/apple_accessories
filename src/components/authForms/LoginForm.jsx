@@ -18,6 +18,7 @@ function LoginForm() {
       <input
         id="email"
         type="email"
+        autoComplete="true"
         {...register("email", {
           required: {
             value: true,

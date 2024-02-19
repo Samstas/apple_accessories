@@ -4,18 +4,20 @@ import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
 } from "firebase/auth";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 import { useForm } from "react-hook-form";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-import { setUser } from "../redux/slices/userSlice";
+import { getUser, setUser } from "../redux/slices/userSlice";
 
 export function useSignUpLogIn() {
   const { register, formState, handleSubmit } = useForm({ mode: "onBlur" });
   const [passwordVisible, setPasswordVisible] = useState(false);
   const { errors, isValid } = formState;
+
+  const user = useSelector(getUser);
 
   function togglePasswordVisible() {
     setPasswordVisible((prev) => !prev);
@@ -71,6 +73,11 @@ export function useSignUpLogIn() {
       })
       .catch(() => toast.error("Invalid user!"));
   }
+
+  // Store USER
+  useEffect(() => {
+    localStorage.setItem("user", JSON.stringify(user));
+  }, [user]);
 
   return {
     errors,

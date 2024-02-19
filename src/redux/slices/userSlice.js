@@ -1,5 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const storedUser = JSON.parse(localStorage.getItem("user"));
+
 const initialState = {
   userName: null,
   email: null,
@@ -9,7 +11,7 @@ const initialState = {
 
 const userSlice = createSlice({
   name: "user",
-  initialState,
+  initialState: storedUser || initialState,
   reducers: {
     setUser(state, { payload }) {
       state.userName = payload.userName;

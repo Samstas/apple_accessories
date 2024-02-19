@@ -27,8 +27,11 @@ import AppLayout from "./app/AppLayout";
 // - ✅ Responsiveness
 
 // ❌ Refactor code/ create context or custom hooks
-// ✅ React Hook Form refactor
 // ❌ LocalStorage for User
+// ❌ Payment Page
+// ❌ UDEMY refactor Tailwind
+
+// ✅ React Hook Form refactor
 // ✅ Make EYE for see password
 
 // ✅ Add Loader, when products list loading
