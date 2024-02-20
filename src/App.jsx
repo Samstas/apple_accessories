@@ -27,10 +27,9 @@ import AppLayout from "./app/AppLayout";
 // - ✅ Responsiveness
 
 // ❌ Refactor code/ create context or custom hooks
-// ❌ LocalStorage for User
-// ❌ Payment Page
 // ❌ UDEMY refactor Tailwind
 
+// ✅ LocalStorage for User
 // ✅ React Hook Form refactor
 // ✅ Make EYE for see password
 

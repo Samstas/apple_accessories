@@ -4,9 +4,9 @@ const sortOptions = [
   //❗value call like in json object - id /and way of sort - asc/desc❗
   { id: 1, value: "id-asc", label: "Sorted by default" }, //value id
   { id: 2, value: "price-asc", label: "Price: Low to High" }, // value price
-  { id: 2, value: "price-desc", label: "Price: High to Low" }, // value price
-  { id: 3, value: "title-asc", label: "Name: (A-Z)" }, //value name
-  { id: 3, value: "title-desc", label: "Name: (Z-A)" }, //value name
+  { id: 3, value: "price-desc", label: "Price: High to Low" }, // value price
+  { id: 4, value: "title-asc", label: "Name: (A-Z)" }, //value name
+  { id: 5, value: "title-desc", label: "Name: (Z-A)" }, //value name
 ];
 
 function SortOptions() {

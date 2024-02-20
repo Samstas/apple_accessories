@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import { getCart } from "../redux/slices/cartSlice";
 import { useCart } from "../context/CartContext";
 
-import CartItem from "./CartItem";
 import { formatCurrency } from "../utils/formatCurrency";
 import { useAuth } from "../hooks/useAuth";
+import CartItem from "./CartItem";
 
 function CartItems() {
   const cart = useSelector(getCart);

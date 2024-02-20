@@ -9,14 +9,13 @@ import { formatCurrency } from "../../utils/formatCurrency";
 function WishList() {
   const { wishList, onRemoveItemFromWishList } = useWishList();
 
-  console.log(wishList);
   return (
     <section className="text-gray-400 body-font">
       {wishList?.length === 0 ? (
-        <EmptyWishlist/>
+        <EmptyWishlist />
       ) : (
         <>
-          <h1 className="text-center text-xl font-bold text-zinc-300 mt-4">
+          <h1 className="text-center text-xl font-bold text-zinc-300 mt-4 uppercase">
             My Wishlist
           </h1>
           {/* Products List Block  */}

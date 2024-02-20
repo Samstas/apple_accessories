@@ -8,6 +8,7 @@ function CartItem({ accessoryItem }) {
 
   return (
     <tr className="text-sm sm:text-base text-zinc-600 text-center">
+      
       <td className="px sm:px-6 py-4 flex items-center font-medium  ">
         <Link to={`/accessories/${id}`} className="pt-1 hover:opacity-80">
           <img src={image} alt="img" className="sm:inline-flex  w-[200px] " />
