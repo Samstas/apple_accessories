@@ -8,7 +8,7 @@ export const accessories = [
     price: 99,
     totalPrice: null,
     quantity: 1,
-    image: "/src/data/accessories-imgs/bands/ocean-band-orange.jpeg",
+    image: "/static/images/bands/ocean-band-orange.jpeg",
     discount: null,
   },
   {
@@ -20,7 +20,7 @@ export const accessories = [
     price: 59,
     totalPrice: null,
     quantity: 1,
-    image: "/src/data/accessories-imgs/cases/finewoven-case-evergreen.jpeg",
+    image: "/static/images/cases/finewoven-case-evergreen.jpeg",
     discount: 10,
   },
   {
@@ -32,7 +32,7 @@ export const accessories = [
     price: 55,
     totalPrice: null,
     quantity: 1,
-    image: "/src/data/accessories-imgs/cables/magsafe-cable-gray.jpeg",
+    image: "/static/images/cables/magsafe-cable-gray.jpeg",
     discount: null,
   },
   {
@@ -44,7 +44,7 @@ export const accessories = [
     price: 99,
     totalPrice: null,
     quantity: 1,
-    image: "/src/data/accessories-imgs/bands/braided-band-stormblue.jpeg",
+    image: "/static/images/bands/braided-band-stormblue.jpeg",
     discount: 15,
   },
 
@@ -57,7 +57,7 @@ export const accessories = [
     price: 149,
     totalPrice: null,
     quantity: 1,
-    image: "/src/data/accessories-imgs/chargers/belkin-charger-standthree.jpeg",
+    image: "/static/images/chargers/belkin-charger-standthree.jpeg",
     discount: 15,
   },
 
@@ -70,7 +70,7 @@ export const accessories = [
     price: 59,
     totalPrice: null,
     quantity: 1,
-    image: "/src/data/accessories-imgs/cases/finewoven-case-mulberry.jpeg",
+    image: "/static/images/cases/finewoven-case-mulberry.jpeg",
     discount: null,
   },
 
@@ -83,7 +83,7 @@ export const accessories = [
     price: 99,
     totalPrice: null,
     quantity: 1,
-    image: "/src/data/accessories-imgs/chargers/belkin-charger-standtwo.jpeg",
+    image: "/static/images/chargers/belkin-charger-standtwo.jpeg",
     discount: null,
   },
 
@@ -96,7 +96,7 @@ export const accessories = [
     price: 49,
     totalPrice: null,
     quantity: 1,
-    image: "/src/data/accessories-imgs/cases/otterbox-case-dragon.jpeg",
+    image: "/static/images/cases/otterbox-case-dragon.jpeg",
     discount: 5,
   },
   {
@@ -109,7 +109,7 @@ export const accessories = [
     totalPrice: null,
     quantity: 1,
     image:
-      "/src/data/accessories-imgs/chargers/twelve-charger-butterflytwo.jpeg",
+      "/static/images/chargers/twelve-charger-butterflytwo.jpeg",
     discount: 10,
   },
 
@@ -122,7 +122,7 @@ export const accessories = [
     price: 49,
     totalPrice: null,
     quantity: 1,
-    image: "/src/data/accessories-imgs/bands/sport-band-blue.jpeg",
+    image: "/static/images/bands/sport-band-blue.jpeg",
     discount: 30,
   },
   {
@@ -134,7 +134,7 @@ export const accessories = [
     price: 49,
     totalPrice: null,
     quantity: 1,
-    image: "/src/data/accessories-imgs/cases/flexquartz-case-transparent.jpeg",
+    image: "/static/images/cases/flexquartz-case-transparent.jpeg",
     discount: 5,
   },
   {
@@ -146,7 +146,7 @@ export const accessories = [
     price: 49,
     totalPrice: null,
     quantity: 1,
-    image: "/src/data/accessories-imgs/bands/sport-band-pink.jpeg",
+    image: "/static/images/bands/sport-band-pink.jpeg",
     discount: null,
   },
   {
@@ -158,7 +158,7 @@ export const accessories = [
     price: 49,
     totalPrice: null,
     quantity: 1,
-    image: "/src/data/accessories-imgs/cases/silicon-case-yellow.jpeg",
+    image: "/static/images/cases/silicon-case-yellow.jpeg",
     discount: null,
   },
 
@@ -171,7 +171,7 @@ export const accessories = [
     price: 149,
     totalPrice: null,
     quantity: 1,
-    image: "/src/data/accessories-imgs/chargers/belkin-charger-pad.jpeg",
+    image: "/static/images/chargers/belkin-charger-pad.jpeg",
     discount: 5,
   },
 
@@ -184,7 +184,7 @@ export const accessories = [
     price: 55,
     totalPrice: null,
     quantity: 1,
-    image: "/src/data/accessories-imgs/cables/magsafe-cable-black.jpeg",
+    image: "/static/images/cables/magsafe-cable-black.jpeg",
     discount: 10,
   },
   {
@@ -196,7 +196,7 @@ export const accessories = [
     price: 49,
     totalPrice: null,
     quantity: 1,
-    image: "/src/data/accessories-imgs/bands/unity-band-black.jpeg",
+    image: "/static/images/bands/unity-band-black.jpeg",
     discount: 10,
   },
   {
@@ -208,7 +208,7 @@ export const accessories = [
     price: 59,
     totalPrice: null,
     quantity: 1,
-    image: "/src/data/accessories-imgs/cases/finewoven-case-taupe.jpeg",
+    image: "/static/images/cases/finewoven-case-taupe.jpeg",
     discount: null,
   },
 
@@ -221,7 +221,7 @@ export const accessories = [
     price: 49,
     totalPrice: null,
     quantity: 1,
-    image: "/src/data/accessories-imgs/cases/otterbox-case-gray.jpeg",
+    image: "/static/images/cases/otterbox-case-gray.jpeg",
     discount: null,
   },
 
@@ -234,7 +234,7 @@ export const accessories = [
     price: 99,
     totalPrice: null,
     quantity: 1,
-    image: "/src/data/accessories-imgs/bands/loop-band-olive.jpeg",
+    image: "/static/images/bands/loop-band-olive.jpeg",
     discount: 5,
   },
   {
@@ -246,7 +246,7 @@ export const accessories = [
     price: 149,
     totalPrice: null,
     quantity: 1,
-    image: "/src/data/accessories-imgs/chargers/hirise-charger-stand.jpeg",
+    image: "/static/images/chargers/hirise-charger-stand.jpeg",
     discount: null,
   },
 
@@ -259,7 +259,7 @@ export const accessories = [
     price: 49,
     totalPrice: null,
     quantity: 1,
-    image: "/src/data/accessories-imgs/bands/sport-band-starlight.jpeg",
+    image: "/static/images/bands/sport-band-starlight.jpeg",
     discount: 5,
   },
 
@@ -272,7 +272,7 @@ export const accessories = [
     price: 49,
     totalPrice: null,
     quantity: 1,
-    image: "/src/data/accessories-imgs/cases/silicon-case-violet.jpeg",
+    image: "/static/images/cases/silicon-case-violet.jpeg",
     discount: 20,
   },
   {
@@ -284,7 +284,7 @@ export const accessories = [
     price: 99,
     totalPrice: null,
     quantity: 1,
-    image: "/src/data/accessories-imgs/bands/ocean-band-blue.jpeg",
+    image: "/static/images/bands/ocean-band-blue.jpeg",
     discount: 10,
   },
 
@@ -297,7 +297,7 @@ export const accessories = [
     price: 49,
     totalPrice: null,
     quantity: 1,
-    image: "/src/data/accessories-imgs/cases/otterbox-case-blue.jpeg",
+    image: "/static/images/cases/otterbox-case-blue.jpeg",
     discount: 10,
   },
   {
@@ -309,7 +309,7 @@ export const accessories = [
     price: 99,
     totalPrice: null,
     quantity: 1,
-    image: "/src/data/accessories-imgs/bands/trail-band-beige.jpeg",
+    image: "/static/images/bands/trail-band-beige.jpeg",
     discount: null,
   },
   {
@@ -321,7 +321,7 @@ export const accessories = [
     price: 49,
     totalPrice: null,
     quantity: 1,
-    image: "/src/data/accessories-imgs/cases/clear-case-transparent.jpeg",
+    image: "/static/images/cases/clear-case-transparent.jpeg",
     discount: null,
   },
   {
@@ -333,7 +333,7 @@ export const accessories = [
     price: 149,
     totalPrice: null,
     quantity: 1,
-    image: "/src/data/accessories-imgs/chargers/morphie-charger-travel.jpeg",
+    image: "/static/images/chargers/morphie-charger-travel.jpeg",
     discount: null,
   },
 
@@ -346,7 +346,7 @@ export const accessories = [
     price: 55,
     totalPrice: null,
     quantity: 1,
-    image: "/src/data/accessories-imgs/cables/magsafe-cable-starlight.jpeg",
+    image: "/static/images/cables/magsafe-cable-starlight.jpeg",
     discount: 5,
   },
 ];
