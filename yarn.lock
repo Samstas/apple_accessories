@@ -218,6 +218,11 @@
     "@babel/helper-validator-identifier" "^7.22.20"
     to-fast-properties "^2.0.0"
 
+"@codewithhridoy/tailwind-browser@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@codewithhridoy/tailwind-browser/-/tailwind-browser-1.0.2.tgz#6b60ad110bb4061f8ade381b8591714387c876e1"
+  integrity sha512-plilniP0wi2wlRJESsBbf7+MpCgq6AvES+KkZl0n/ZIuo7wc+TW8g3swXFaA4NbsL0fos0niSK92zeeWtJOahw==
+
 "@esbuild/aix-ppc64@0.19.12":
   version "0.19.12"
   resolved "https://registry.yarnpkg.com/@esbuild/aix-ppc64/-/aix-ppc64-0.19.12.tgz#d1bc06aedb6936b3b6d313bf809a5a40387d2b7f"

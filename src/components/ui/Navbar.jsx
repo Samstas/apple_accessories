@@ -1,28 +1,27 @@
-import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { BiShoppingBag, BiUser, BiHeart } from "react-icons/bi";
+import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { BiShoppingBag, BiUser, BiHeart } from 'react-icons/bi'
 
-import Logo from "./Logo";
-import SearchField from "../SearchField";
+import Logo from './Logo'
+import SearchField from '../SearchField'
 
-import { getCart } from "../../redux/slices/cartSlice";
-
+import { getCart } from '../../redux/slices/cartSlice'
 
 function Navbar() {
-  const cartQuantity = useSelector(getCart).length;
+  const cartQuantity = useSelector(getCart).length
 
   return (
-    <nav className="flex justify-between items-center border-b-2 border-zinc-200 px-4 py-2">
+    <nav className="flex items-center justify-between border-b-2 border-zinc-200 px-4 py-2">
       <Logo />
 
       <SearchField />
 
-      <ul className="flex gap-2 items-center">
+      <ul className="flex items-center gap-2">
         <li>
           <Link to="cart" className="relative">
-            <BiShoppingBag className="cursor-pointer text-[1.5rem] text-zinc-800 hover:text-zinc-600 transition ease-in" />
+            <BiShoppingBag className="cursor-pointer text-[1.5rem] text-zinc-800 transition ease-in hover:text-zinc-600" />
             {cartQuantity ? (
-              <div className=" w-5 h-5 text-center font-bold  absolute -right-2 -top-1 sm:-right-2 sm:-top-1 bg-orange-400 text-zinc-800 text-[12px] rounded-full p-[1px] overflow-hidden">
+              <div className=" absolute h-5 w-5 overflow-hidden  rounded-full bg-orange-400 p-[1px] text-center text-[12px] font-bold text-zinc-800 firefox:-right-[2rem] firefox:top-[0.75rem] chrome:-right-2 chrome:-top-1">
                 {cartQuantity}
               </div>
             ) : null}
@@ -30,17 +29,17 @@ function Navbar() {
         </li>
         <li>
           <Link to="/wishlist">
-            <BiHeart className="cursor-pointer text-[1.5rem] text-zinc-800 hover:text-zinc-600 transition ease-in" />
+            <BiHeart className="cursor-pointer text-[1.5rem] text-zinc-800 transition ease-in hover:text-zinc-600" />
           </Link>
         </li>
         <li>
           <Link to="/profile">
-            <BiUser className="cursor-pointer text-[1.5rem] text-zinc-800 hover:text-zinc-600 transition ease-in" />
+            <BiUser className="cursor-pointer text-[1.5rem] text-zinc-800 transition ease-in hover:text-zinc-600" />
           </Link>
         </li>
       </ul>
     </nav>
-  );
+  )
 }
 
-export default Navbar;
+export default Navbar
