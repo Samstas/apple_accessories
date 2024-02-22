@@ -17,13 +17,3 @@ body {
 button:disabled {
   cursor: not-allowed;
 }
-
-/* Mozilla Firefox-specific styles */
-/* @supports (-moz-appearance: none) {
-  top: 10rem;
-} */
-
-/* Safari/Chrome-specific styles */
-/* @supports (-webkit-appearance: none) {
-  top: 10rem;
-} */
