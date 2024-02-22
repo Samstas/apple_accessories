@@ -21,7 +21,7 @@ function Navbar() {
           <Link to="cart" className="relative">
             <BiShoppingBag className="cursor-pointer text-[1.5rem] text-zinc-800 transition ease-in hover:text-zinc-600" />
             {cartQuantity ? (
-              <div className=" absolute h-5 w-5 overflow-hidden  rounded-full bg-orange-400 p-[1px] text-center text-[12px] font-bold text-zinc-800 firefox:-right-[2rem] firefox:top-[0.75rem] safari:-right-7 safari:-top-6  chrome:-right-2 chrome:-top-1">
+              <div className=" absolute h-5 w-5 overflow-hidden  rounded-full bg-orange-400 p-[1px] text-center text-[12px] font-bold text-zinc-800 firefox:-right-[2rem] firefox:top-[0.75rem] safari:-right-9 safari:-top-8  chrome:-right-2 chrome:-top-1">
                 {cartQuantity}
               </div>
             ) : null}
