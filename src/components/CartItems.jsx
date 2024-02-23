@@ -1,38 +1,38 @@
-import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 
-import { getCart } from "../redux/slices/cartSlice";
-import { useCart } from "../context/CartContext";
+import { getCart } from '../redux/slices/cartSlice'
+import { useCart } from '../context/CartContext'
 
-import { formatCurrency } from "../utils/formatCurrency";
-import { useAuth } from "../hooks/useAuth";
-import CartItem from "./CartItem";
+import { formatCurrency } from '../utils/formatCurrency'
+import { useAuth } from '../hooks/useAuth'
+import CartItem from './CartItem'
 
 function CartItems() {
-  const cart = useSelector(getCart);
-  const { totalCartPrice } = useCart();
-  const { isAuth } = useAuth();
+  const cart = useSelector(getCart)
+  const { totalCartPrice } = useCart()
+  const { isAuth } = useAuth()
 
   return (
     <>
-      <div className="min-h-80 max-w-4xl my-4 sm:my-8 mx-auto w-full">
+      <div className="mx-auto my-4 min-h-80 w-full max-w-4xl sm:my-8">
         <table className="mx-auto sm:w-full">
           {/* Table head  */}
           <thead>
-            <tr className="uppercase text-xs sm:text-sm border-b">
-              <th className="font-normal w-0 text-zinc-400 md:px-6 md:py-4 px-2 py-1">
+            <tr className="border-b text-xs uppercase sm:text-sm">
+              <th className="w-0 px-2 py-1 font-normal text-zinc-400 md:px-6 md:py-4">
                 Product
               </th>
-              <th className="font-normal w-0 text-zinc-400 md:px-6 md:py-4 px-2 py-1">
+              <th className="w-0 px-1 py-1 font-normal text-zinc-400 md:px-6 md:py-4">
                 Name
               </th>
-              <th className="font-normal w-0 text-zinc-400 md:px-6 md:py-4 px-2 py-1">
+              <th className="w-0 px-2 py-1 font-normal text-zinc-400 md:px-6 md:py-4">
                 Quantity
               </th>
-              <th className="font-normal w-0 text-zinc-400 px-6 py-4 hidden sm:table-cell">
+              <th className="hidden w-0 px-6 py-4 font-normal text-zinc-400 sm:table-cell">
                 Price
               </th>
-              <th className="font-normal w-0 text-zinc-400 md:px-6 md:py-4 px-2 py-1">
+              <th className="w-0 px-2 py-1 font-normal text-zinc-400 md:px-6 md:py-4">
                 Remove
               </th>
             </tr>
@@ -44,11 +44,11 @@ function CartItems() {
             ))}
             <tr className="text-center">
               <td></td>
-              <td className="text-base text-zinc-700 font-semibold uppercase px-4 sm:px-6 py-8">
+              <td className="px-2 py-8 text-base font-semibold uppercase text-zinc-700 sm:px-6">
                 Total
               </td>
               {/* TODO: write like reducer to sum all prices  */}
-              <td className="text-xl font-medium px-4 sm:px-6 py-4">
+              <td className="w-[30%] px-0 py-4 text-xl font-medium sm:w-[20%]  sm:px-0 ">
                 {formatCurrency(totalCartPrice)}
               </td>
               <td></td>
@@ -56,23 +56,23 @@ function CartItems() {
           </tbody>
         </table>
         {/* Buttons  */}
-        <div className="flex justify-around items-center  mt-6">
+        <div className="mt-6 flex items-center  justify-around">
           <Link
             to="/"
-            className="border py-2 px-3  rounded-md  hover:text-white hover:bg-zinc-700 text-zinc-700 bg-inherit border-zinc-700 transition ease-in delay-75"
+            className="rounded-md border border-zinc-700  bg-inherit  px-3 py-2 text-zinc-700 transition delay-75 ease-in hover:bg-zinc-700 hover:text-white"
           >
             &larr; Back to products
           </Link>
           <Link
-            to={isAuth ? "/payment" : "/login"}
-            className="border py-2 px-3 border-orange-400  rounded-md bg-inherit text-zinc-800 uppercase font-bold  hover:bg-orange-400 hover:border-zinc-700 transition ease-in hover:shadow-md delay-75"
+            to={isAuth ? '/payment' : '/login'}
+            className="rounded-md border border-orange-400 bg-inherit  px-3 py-2 font-bold uppercase text-zinc-800  transition delay-75 ease-in hover:border-zinc-700 hover:bg-orange-400 hover:shadow-md"
           >
             Checkout
           </Link>
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default CartItems;
+export default CartItems

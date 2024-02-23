@@ -5,7 +5,7 @@ import Header from "../components/ui/Header";
 function AppLayout() {
   return (
     // w-[66.67vw] 
-    <div className="w-[100vw] sm:w-[66.67vw] mx-auto flex flex-col h-[100vh]">
+    <div className="w-[100vw] sm:w-[66.67vw] md:w-screen xl:w-[66.67vw] mx-auto flex flex-col h-[100vh]">
       <Header />
 
       <main className="grow">
