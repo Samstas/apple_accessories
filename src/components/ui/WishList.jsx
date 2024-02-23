@@ -24,7 +24,7 @@ function WishList() {
               {wishList?.map(({ id, image, title, price }) => (
                 <li
                   key={id}
-                  className="relative xl:w-1/4 lg:w-1/3 md:w-1/2 p-3 w-full text-center hover:scale-[1.01] cursor-pointer hover:transition-all ease-in hover:ease-in rounded-md hover:duration-200 duration-200 sm:mb-0 "
+                  className="relative xl:w-1/4 lg:w-1/3 md:w-1/3 p-3 w-full text-center hover:scale-[1.01] cursor-pointer hover:transition-all ease-in hover:ease-in rounded-md hover:duration-200 duration-200 sm:mb-0 "
                 >
                   <Link
                     to={`/accessories/${id}`}

@@ -11,7 +11,7 @@ function Navbar() {
   const cartQuantity = useSelector(getCart).length
 
   return (
-    <nav className="flex items-center justify-between border-b-2 border-zinc-200 px-4 py-2">
+    <nav className="flex items-center justify-between border-b-2 border-zinc-200 px-10 py-2">
       <Logo />
 
       <SearchField />
