@@ -1,12 +1,12 @@
 import { FaSearchMinus } from 'react-icons/fa'
 import ProductItem from './ProductItem'
-import Loader from '../components/ui/loader/Loader'
-import SortOptions from './dataOperations/SortOptions'
-import FilterOptions from './dataOperations/FilterOptions'
+import Loader from '../ui/loader/Loader'
+import SortOptions from '../dataOperations/SortOptions'
+import FilterOptions from '../dataOperations/FilterOptions'
 
-import { useFilteredData } from '../hooks/useFilteredData'
+import { useFilteredData } from '../../hooks/useFilteredData'
 import { useEffect, useState } from 'react'
-import BackToTopBtn from './ui/BackToTopBtn'
+import BackToTopBtn from '../ui/BackToTopBtn'
 
 function ProductsList() {
   const { sortedProducts } = useFilteredData()

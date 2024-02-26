@@ -7,6 +7,7 @@ const filterOptions = [
   { id: 4, label: "Chargers", value: "chargers" },
   { id: 5, label: "Cables", value: "cables" },
 ];
+
 function FilterOptions({ filterField }) {
   const [searchParams, setSearchParams] = useSearchParams();
   const currentValue = searchParams.get(filterField) || filterOptions.at(0);

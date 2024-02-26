@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom";
-import LoginForm from "../../components/authForms/LoginForm";
+import { Link } from 'react-router-dom'
+
+import LoginForm from '../../components/authForms/LoginForm'
 
 function LoginPage() {
   return (
@@ -18,14 +19,14 @@ function LoginPage() {
           Do you want to register?
           <Link
             to="/signup"
-            className="font-semibold leading-6 text-orange-400 hover:text-orange-600 hover:underline transition  ease-in ml-1"
+            className="ml-1 font-semibold leading-6 text-orange-400 transition ease-in  hover:text-orange-600 hover:underline"
           >
             Sign Up
           </Link>
         </p>
       </div>
     </section>
-  );
+  )
 }
 
-export default LoginPage;
+export default LoginPage

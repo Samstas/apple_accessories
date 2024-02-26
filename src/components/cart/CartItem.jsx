@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import { useCart } from '../context/CartContext'
-import { formatCurrency } from '../utils/formatCurrency'
+import { useCart } from '../../context/CartContext'
+import { formatCurrency } from '../../utils/formatCurrency'
 
 function CartItem({ accessoryItem }) {
   const { id, image, title, quantity, totalPrice } = accessoryItem

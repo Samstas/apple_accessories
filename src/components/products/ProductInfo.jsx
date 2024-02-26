@@ -1,69 +1,69 @@
-import { BiHeart } from "react-icons/bi";
-import { useState } from "react";
-import { useSelector } from "react-redux";
-import { useParams, useNavigate } from "react-router-dom";
+import { BiHeart } from 'react-icons/bi'
+import { useState } from 'react'
+import { useSelector } from 'react-redux'
+import { useParams, useNavigate } from 'react-router-dom'
 
-import Loader from "../components/ui/loader/Loader";
+import Loader from '../ui/loader/Loader'
 
-import { useCart } from "../context/CartContext";
-import { getCart } from "../redux/slices/cartSlice";
-import { useWishList } from "../hooks/useWishList";
-import { accessories } from "../data/data-accessories";
-import { formatCurrency } from "../utils/formatCurrency";
+import { useCart } from '../../context/CartContext'
+import { getCart } from '../../redux/slices/cartSlice'
+import { useWishList } from '../../hooks/useWishList'
+import { accessories } from '../../data/data-accessories'
+import { formatCurrency } from '../../utils/formatCurrency'
 
 function ProductInfo() {
-  const { id } = useParams();
-  const { onAddToCart } = useCart();
+  const { id } = useParams()
+  const { onAddToCart } = useCart()
 
-  const products = accessories;
-  const cart = useSelector(getCart);
+  const products = accessories
+  const cart = useSelector(getCart)
 
   const {
     onAddProductToWishList,
     onRemoveItemFromWishList,
     isItemAlreadyInWishList,
-  } = useWishList();
+  } = useWishList()
 
   //check if item inside wishlist
-  const itemInsideWishList = isItemAlreadyInWishList(id);
+  const itemInsideWishList = isItemAlreadyInWishList(id)
 
-  const [toggle, setToggle] = useState(itemInsideWishList);
+  const [toggle, setToggle] = useState(itemInsideWishList)
 
   function handleToggle(productId, image, title, price) {
     if (toggle === true) {
-      onRemoveItemFromWishList(productId);
-      return setToggle(false);
+      onRemoveItemFromWishList(productId)
+      return setToggle(false)
     } else {
-      onAddProductToWishList(productId, image, title, price);
-      return setToggle(true);
+      onAddProductToWishList(productId, image, title, price)
+      return setToggle(true)
     }
   }
 
-  const isItemAlreadyInsideCart = cart.some((item) => item.id === id);
-  const navigate = useNavigate();
+  const isItemAlreadyInsideCart = cart.some((item) => item.id === id)
+  const navigate = useNavigate()
 
   const { description, image, price, title, category, quantity, totalPrice } =
-    products.find((item) => item.id === Number(id));
+    products.find((item) => item.id === Number(id))
 
   return !products ? (
     <Loader />
   ) : (
-    <section className="text-gray-600 body-font overflow-hidden">
-      <div className="container px-5 py-24 mx-auto">
-        <div className="lg:w-4/5 mx-auto flex flex-wrap">
+    <section className="body-font overflow-hidden text-gray-600">
+      <div className="container mx-auto px-5 py-24">
+        <div className="mx-auto flex flex-wrap lg:w-4/5">
           <img
             alt={`Image ${title}`}
-            className="xl:w-1/2 w-full lg:h-auto  object-cover object-center rounded"
+            className="w-full rounded object-cover  object-center lg:h-auto xl:w-1/2"
             src={image}
           />
-          <div className="xl:w-1/2 w-full xl:pl-10 xl:py-6 mt-6 xl:mt-0">
-            <h2 className="text-sm title-font text-gray-500 tracking-widest uppercase">
+          <div className="mt-6 w-full xl:mt-0 xl:w-1/2 xl:py-6 xl:pl-10">
+            <h2 className="title-font text-sm uppercase tracking-widest text-gray-500">
               {category}
             </h2>
-            <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">
+            <h1 className="title-font mb-1 text-3xl font-medium text-gray-900">
               {title}
             </h1>
-            <div className="flex mb-4">
+            <div className="mb-4 flex">
               {/* <span className="flex items-center">
             <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
               <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
@@ -125,20 +125,20 @@ function ProductInfo() {
             </div>
           </div>
         </div> */}
-            <div className="flex mt-10">
-              <span className="title-font font-medium sm:text-3xl text-lg text-zinc-800 mr-2">
+            <div className="mt-10 flex">
+              <span className="title-font mr-2 text-lg font-medium text-zinc-800 sm:text-3xl">
                 {formatCurrency(price)}
               </span>
               <button
-                onClick={() => navigate("/")}
-                className="flex items-center ml-auto hover:text-white hover:bg-zinc-700 text-zinc-700 bg-inherit border border-zinc-700 transition ease-in delay-75  lg:py-2 lg:px-6 sm:py-1 sm:px-4 px-2 text-sm md:text-[1rem] py-2 focus:outline-none rounded mr-1 "
+                onClick={() => navigate('/')}
+                className="ml-auto mr-1 flex items-center rounded border border-zinc-700 bg-inherit px-2 py-2 text-sm text-zinc-700  transition delay-75 ease-in hover:bg-zinc-700 hover:text-white focus:outline-none sm:px-4 sm:py-1 md:text-[1rem] lg:px-6 lg:py-2 "
               >
                 &larr; Back to store
               </button>
               {isItemAlreadyInsideCart ? (
                 <button
-                  onClick={() => navigate("/cart")}
-                  className="flex items-center  ml-1 bg-zinc-700 text-white hover:text-zinc-700 hover:bg-inherit hover:border hover:border-zinc-700 transition ease-in delay-75 lg:py-2 lg:px-6 sm:py-1 sm:px-4 px-2 text-sm md:text-[1rem] py-2 focus:outline-none  rounded mr-1"
+                  onClick={() => navigate('/cart')}
+                  className="ml-1 mr-1  flex items-center rounded bg-zinc-700 px-2 py-2 text-sm text-white transition delay-75 ease-in hover:border hover:border-zinc-700 hover:bg-inherit hover:text-zinc-700 focus:outline-none sm:px-4 sm:py-1 md:text-[1rem]  lg:px-6 lg:py-2"
                 >
                   Go to cart
                 </button>
@@ -147,7 +147,7 @@ function ProductInfo() {
                   onClick={() =>
                     onAddToCart(id, image, title, quantity, price, totalPrice)
                   }
-                  className="flex items-center  ml-1  bg-zinc-700 text-white hover:border  hover:text-zinc-700 hover:bg-inherit hover:border-zinc-700 transition ease-in delay-75 lg:py-2 lg:px-6 sm:py-1 sm:px-4 px-3 text-sm md:text-[1rem] py-2 focus:outline-none rounded mr-1"
+                  className="ml-1 mr-1  flex  items-center rounded bg-zinc-700  px-3 py-2 text-sm text-white transition delay-75 ease-in hover:border hover:border-zinc-700 hover:bg-inherit hover:text-zinc-700 focus:outline-none sm:px-4 sm:py-1 md:text-[1rem] lg:px-6 lg:py-2"
                 >
                   Add to cart
                 </button>
@@ -155,8 +155,8 @@ function ProductInfo() {
 
               <button
                 onClick={() => handleToggle(id, image, title, price)}
-                className={`rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 sm:ml-4 ml-1 hover:scale-110 hover:bg-orange-500 shadow active:scale-90 transition ease-in  ${
-                  itemInsideWishList ? "bg-orange-400" : ""
+                className={`ml-1 inline-flex h-10 w-10 items-center justify-center rounded-full border-0 bg-gray-200 p-0 text-gray-500 shadow transition ease-in hover:scale-110 hover:bg-orange-500 active:scale-90 sm:ml-4  ${
+                  itemInsideWishList ? 'bg-orange-400' : ''
                 }`}
               >
                 <BiHeart size="24" color="#2a2a2a" />
@@ -166,7 +166,7 @@ function ProductInfo() {
         </div>
       </div>
     </section>
-  );
+  )
 }
 
-export default ProductInfo;
+export default ProductInfo

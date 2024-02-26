@@ -1,11 +1,11 @@
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 
-import { getCart } from '../redux/slices/cartSlice'
-import { useCart } from '../context/CartContext'
+import { getCart } from '../../redux/slices/cartSlice'
+import { useCart } from '../../context/CartContext'
 
-import { formatCurrency } from '../utils/formatCurrency'
-import { useAuth } from '../hooks/useAuth'
+import { formatCurrency } from '../../utils/formatCurrency'
+import { useAuth } from '../../hooks/useAuth'
 import CartItem from './CartItem'
 
 function CartItems() {

@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom";
-import SignUpForm from "../../components/authForms/SignUpForm";
+import { Link } from 'react-router-dom'
+
+import SignUpForm from '../../components/authForms/SignUpForm'
 
 function SignUpPage() {
   return (
@@ -18,14 +19,14 @@ function SignUpPage() {
           Already have an account?
           <Link
             to="/login"
-            className="font-semibold leading-6 text-orange-400 hover:text-orange-600 hover:underline transition  ease-in ml-1"
+            className="ml-1 font-semibold leading-6 text-orange-400 transition ease-in  hover:text-orange-600 hover:underline"
           >
             Log In
           </Link>
         </p>
       </div>
     </section>
-  );
+  )
 }
 
-export default SignUpPage;
+export default SignUpPage

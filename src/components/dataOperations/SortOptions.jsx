@@ -1,26 +1,25 @@
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams } from 'react-router-dom'
 
 const sortOptions = [
-  //❗value call like in json object - id /and way of sort - asc/desc❗
-  { id: 1, value: "id-asc", label: "Sorted by default" }, //value id
-  { id: 2, value: "price-asc", label: "Price: Low to High" }, // value price
-  { id: 3, value: "price-desc", label: "Price: High to Low" }, // value price
-  { id: 4, value: "title-asc", label: "Name: (A-Z)" }, //value name
-  { id: 5, value: "title-desc", label: "Name: (Z-A)" }, //value name
-];
+  { id: 1, value: 'id-asc', label: 'Sorted by default' }, //value id
+  { id: 2, value: 'price-asc', label: 'Price: Low to High' }, // value price
+  { id: 3, value: 'price-desc', label: 'Price: High to Low' }, // value price
+  { id: 4, value: 'title-asc', label: 'Name: (A-Z)' }, //value name
+  { id: 5, value: 'title-desc', label: 'Name: (Z-A)' }, //value name
+]
 
 function SortOptions() {
-  const [searchParams, setSearchParams] = useSearchParams();
-  const sortBy = searchParams.get("sortBy") || "id-asc";
+  const [searchParams, setSearchParams] = useSearchParams()
+  const sortBy = searchParams.get('sortBy') || 'id-asc'
 
   function handleChange(e) {
-    searchParams.set("sortBy", e.target.value);
-    setSearchParams(searchParams, { replace: true });
+    searchParams.set('sortBy', e.target.value)
+    setSearchParams(searchParams, { replace: true })
   }
 
   return (
     <select
-      className="bg-inherit border border-gray-300 text-gray-900 text-[0.9rem] xl:text-[1rem] rounded-lg focus:ring-zinc-700 focus:border-zinc-500  p-2.5 lg:py-2 lg:px-4  transition ease-in-out duration-150"
+      className="rounded-lg border border-gray-300 bg-inherit p-2.5 text-[0.9rem] text-gray-900 transition duration-150  ease-in-out focus:border-zinc-500 focus:ring-zinc-700  lg:px-4 lg:py-2 xl:text-[1rem]"
       value={sortBy}
       onChange={handleChange}
     >
@@ -30,100 +29,7 @@ function SortOptions() {
         </option>
       ))}
     </select>
-  );
-}
-
-export default SortOptions;
-
-// TESTING EXAMPLE
-/*
-import { Fragment } from 'react'
-import { Menu, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
-export default function Example() {
-  return (
-    <Menu as="div" className="relative inline-block text-left">
-      <div>
-        <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
-          Options
-          <ChevronDownIcon className="-mr-1 h-5 w-5 text-gray-400" aria-hidden="true" />
-        </Menu.Button>
-      </div>
-
-      <Transition
-        as={Fragment}
-        enter="transition ease-out duration-100"
-        enterFrom="transform opacity-0 scale-95"
-        enterTo="transform opacity-100 scale-100"
-        leave="transition ease-in duration-75"
-        leaveFrom="transform opacity-100 scale-100"
-        leaveTo="transform opacity-0 scale-95"
-      >
-        <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-          <div className="py-1">
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="#"
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  Account settings
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="#"
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  Support
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="#"
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  License
-                </a>
-              )}
-            </Menu.Item>
-            <form method="POST" action="#">
-              <Menu.Item>
-                {({ active }) => (
-                  <button
-                    type="submit"
-                    className={classNames(
-                      active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                      'block w-full px-4 py-2 text-left text-sm'
-                    )}
-                  >
-                    Sign out
-                  </button>
-                )}
-              </Menu.Item>
-            </form>
-          </div>
-        </Menu.Items>
-      </Transition>
-    </Menu>
   )
 }
-*/
+
+export default SortOptions

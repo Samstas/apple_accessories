@@ -1,7 +1,7 @@
-import ProductInfo from "../../components/ProductInfo";
+import ProductInfo from '../../components/products/ProductInfo'
 
 function ProductInfoPage() {
-  return <ProductInfo />;
+  return <ProductInfo />
 }
 
-export default ProductInfoPage;
+export default ProductInfoPage

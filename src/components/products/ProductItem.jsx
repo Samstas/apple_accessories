@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
-import { formatCurrency } from '../utils/formatCurrency'
-import { useEffect, useState } from 'react'
+import { formatCurrency } from '../../utils/formatCurrency'
 
 function ProductItem({ item }) {
   const { id, title, image, price } = item

@@ -1,11 +1,10 @@
-import { Outlet } from "react-router-dom";
-import Footer from "../components/ui/Footer";
-import Header from "../components/ui/Header";
+import { Outlet } from 'react-router-dom'
+import Footer from '../components/ui/Footer'
+import Header from '../components/ui/Header'
 
 function AppLayout() {
   return (
-    // w-[66.67vw] 
-    <div className="w-[100vw] sm:w-[66.67vw] md:w-screen xl:w-[66.67vw] mx-auto flex flex-col h-[100vh]">
+    <div className="mx-auto flex h-[100vh] w-[100vw] flex-col sm:w-[66.67vw] md:w-screen xl:w-[66.67vw]">
       <Header />
 
       <main className="grow">
@@ -14,7 +13,7 @@ function AppLayout() {
 
       <Footer />
     </div>
-  );
+  )
 }
 
-export default AppLayout;
+export default AppLayout

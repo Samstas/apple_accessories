@@ -1,7 +1,7 @@
-import ProductsList from "../../components/ProductsList";
+import ProductsList from '../../components/products/ProductsList'
 
 function ProductsListPage() {
-  return <ProductsList />;
+  return <ProductsList />
 }
 
-export default ProductsListPage;
+export default ProductsListPage
