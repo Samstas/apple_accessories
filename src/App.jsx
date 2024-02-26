@@ -1,41 +1,17 @@
-import { Routes, Route, Navigate } from "react-router-dom";
-import { Toaster } from "react-hot-toast";
+import { Routes, Route, Navigate } from 'react-router-dom'
+import { Toaster } from 'react-hot-toast'
 
-import ShoppingCartPage from "./app/pages/ShoppingCartPage";
-import ProductsListPage from "./app/pages/ProductsListPage";
-import ProductInfoPage from "./app/pages/ProductInfoPage";
-import NotFoundPage from "./app/pages/NotFoundPage";
-import WishListPage from "./app/pages/WishListPage";
-import ProfilePage from "./app/pages/ProfilePage";
-import PaymentPage from "./app/pages/PaymentPage";
-import SignUpPage from "./auth/pages/SignUpPage";
-import LoginPage from "./auth/pages/LoginPage";
-import AuthLayout from "./auth/AuthLayout";
-import AppLayout from "./app/AppLayout";
-
-// ✅ Add function to convert currency
-// ✅ Set regular colors
-// ✅ Change select style Sorting
-// ✅ Make Authentication with Firebase
-// ✅ Add react-toaster for notifications
-// ✅ Change style of all buttons, bg, border-radius, hover, active ...
-// - ✅ Button style,
-// - ✅ Background color
-// - ✅ Search Input
-// - ✅ Favicon
-// - ✅ Selector with options Design
-// - ✅ Responsiveness
-
-// ❌ Refactor code/ create context or custom hooks
-// ❌ UDEMY refactor Tailwind
-
-// ✅ LocalStorage for User
-// ✅ React Hook Form refactor
-// ✅ Make EYE for see password
-
-// ✅ Add Loader, when products list loading
-// ✅ OnClick Checkout check if isAuth true, next step...
-// ✅ Style of Profile Page
+import ShoppingCartPage from './app/pages/ShoppingCartPage'
+import ProductsListPage from './app/pages/ProductsListPage'
+import ProductInfoPage from './app/pages/ProductInfoPage'
+import NotFoundPage from './app/pages/NotFoundPage'
+import WishListPage from './app/pages/WishListPage'
+import ProfilePage from './app/pages/ProfilePage'
+import PaymentPage from './app/pages/PaymentPage'
+import SignUpPage from './auth/pages/SignUpPage'
+import LoginPage from './auth/pages/LoginPage'
+import AuthLayout from './auth/AuthLayout'
+import AppLayout from './app/AppLayout'
 
 function App() {
   return (
@@ -68,7 +44,7 @@ function App() {
       <Toaster
         position="top-center"
         gutter={12}
-        containerStyle={{ margin: "8px" }}
+        containerStyle={{ margin: '8px' }}
         toastOptions={{
           success: {
             duration: 3000,
@@ -77,16 +53,16 @@ function App() {
             duration: 5000,
           },
           style: {
-            fontSize: "16px",
-            maxWidth: "500px",
-            padding: "16px 24px",
-            backgroundColor: "#eee",
-            color: "#202020",
+            fontSize: '16px',
+            maxWidth: '500px',
+            padding: '16px 24px',
+            backgroundColor: '#eee',
+            color: '#202020',
           },
         }}
       />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
